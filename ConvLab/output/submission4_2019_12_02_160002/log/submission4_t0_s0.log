@@ -1,0 +1,727 @@
+[2019-12-02 16:00:03,487 PID:2801 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2019-12-02 16:00:03,488 PID:2801 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmprlwac23b
+[2019-12-02 16:00:03,578 PID:2801 INFO params.py pop] type = default
+[2019-12-02 16:00:03,578 PID:2801 INFO vocabulary.py from_files] Loading token dictionary from /tmp/tmprlwac23b/vocabulary.
+[2019-12-02 16:00:03,591 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}, 'type': 'milu'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,591 PID:2801 INFO params.py pop] model.type = milu
+[2019-12-02 16:00:03,591 PID:2801 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.model.MILU'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,592 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.type = basic
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.embedder_to_indexer_map = None
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.allow_unmatched_keys = False
+[2019-12-02 16:00:03,592 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = token_characters
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+[2019-12-02 16:00:03,592 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+[2019-12-02 16:00:03,593 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+[2019-12-02 16:00:03,593 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.seq2vec_encoder.Seq2VecEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'} and extras {}
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+[2019-12-02 16:00:03,594 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.cnn_encoder.CnnEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128} and extras {}
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 128
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [3]
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = relu
+[2019-12-02 16:00:03,594 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+[2019-12-02 16:00:03,596 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+[2019-12-02 16:00:03,596 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,596 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.type = embedding
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.projection_dim = None
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.trainable = True
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.padding_index = None
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.max_norm = None
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+[2019-12-02 16:00:03,597 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.sparse = False
+[2019-12-02 16:00:03,604 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py pop] model.encoder.type = lstm
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py pop] model.encoder.batch_first = True
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py pop] model.encoder.stateful = False
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py log_recursively] model.encoder.bidirectional = True
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py log_recursively] model.encoder.dropout = 0.5
+[2019-12-02 16:00:03,604 PID:2801 INFO params.py log_recursively] model.encoder.hidden_size = 200
+[2019-12-02 16:00:03,605 PID:2801 INFO params.py log_recursively] model.encoder.input_size = 178
+[2019-12-02 16:00:03,605 PID:2801 INFO params.py log_recursively] model.encoder.num_layers = 1
+[2019-12-02 16:00:03,605 PID:2801 INFO params.py log_recursively] model.encoder.batch_first = True
+[2019-12-02 16:00:03,609 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py pop] model.intent_encoder.type = lstm
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py pop] model.intent_encoder.batch_first = True
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py pop] model.intent_encoder.stateful = False
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.bidirectional = True
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.dropout = 0.5
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.hidden_size = 200
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.input_size = 400
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.num_layers = 1
+[2019-12-02 16:00:03,610 PID:2801 INFO params.py log_recursively] model.intent_encoder.batch_first = True
+[2019-12-02 16:00:03,618 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,618 PID:2801 INFO params.py pop] model.attention.type = bilinear
+[2019-12-02 16:00:03,618 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {'matrix_dim': 400, 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:03,618 PID:2801 INFO params.py pop] model.attention.vector_dim = 400
+[2019-12-02 16:00:03,619 PID:2801 INFO params.py pop] model.attention.matrix_dim = 400
+[2019-12-02 16:00:03,619 PID:2801 INFO params.py pop] model.attention.normalize = True
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.context_for_intent = True
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.context_for_tag = False
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.attention_for_intent = False
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.attention_for_tag = False
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.sequence_label_namespace = labels
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.intent_label_namespace = intent_labels
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.label_encoding = BIO
+[2019-12-02 16:00:03,620 PID:2801 INFO params.py pop] model.include_start_end_transitions = False
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.crf_decoding = False
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.constrain_crf_decoding = None
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.focal_loss_gamma = None
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.nongeneral_intent_weight = 5.0
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.num_train_examples = None
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.calculate_span_f1 = None
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.dropout = 0.3
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.verbose_metrics = False
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.regularizer = [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]]
+[2019-12-02 16:00:03,621 PID:2801 INFO params.py pop] model.regularizer.list.list.type = l2
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__] Initializing parameters
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__] Done initializing parameters; the following parameters are using their default initialization from their code
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    attention._bias
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    attention._weight_matrix
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.bias_hh_l0
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.bias_hh_l0_reverse
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.bias_ih_l0
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.bias_ih_l0_reverse
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.weight_hh_l0
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.weight_hh_l0_reverse
+[2019-12-02 16:00:03,677 PID:2801 INFO initializers.py __call__]    encoder._module.weight_ih_l0
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    encoder._module.weight_ih_l0_reverse
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0_reverse
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0_reverse
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0_reverse
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0_reverse
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_projection_layer.bias
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    intent_projection_layer.weight
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    tag_projection_layer._module.bias
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    tag_projection_layer._module.weight
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+[2019-12-02 16:00:03,678 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+[2019-12-02 16:00:03,679 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+[2019-12-02 16:00:03,679 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_tokens.weight
+[2019-12-02 16:00:03,963 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}, 'type': 'milu'} and extras {}
+[2019-12-02 16:00:03,963 PID:2801 INFO params.py pop] dataset_reader.type = milu
+[2019-12-02 16:00:03,964 PID:2801 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.dataset_reader.MILUDatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}} and extras {}
+[2019-12-02 16:00:03,964 PID:2801 INFO params.py pop] dataset_reader.context_size = 5
+[2019-12-02 16:00:03,964 PID:2801 INFO params.py pop] dataset_reader.agent = None
+[2019-12-02 16:00:03,964 PID:2801 INFO params.py pop] dataset_reader.random_context_size = True
+[2019-12-02 16:00:03,964 PID:2801 INFO params.py pop] dataset_reader.token_delimiter = None
+[2019-12-02 16:00:03,964 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'min_padding_length': 3, 'type': 'characters'} and extras {}
+[2019-12-02 16:00:03,964 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.type = characters
+[2019-12-02 16:00:03,964 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_characters_indexer.TokenCharactersIndexer from params {'min_padding_length': 3} and extras {}
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.namespace = token_characters
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.start_tokens = None
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.end_tokens = None
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.min_padding_length = 3
+[2019-12-02 16:00:03,965 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'lowercase_tokens': True, 'type': 'single_id'} and extras {}
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.type = single_id
+[2019-12-02 16:00:03,965 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'lowercase_tokens': True} and extras {}
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.namespace = tokens
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.lowercase_tokens = True
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.start_tokens = None
+[2019-12-02 16:00:03,965 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.end_tokens = None
+[2019-12-02 16:00:03,966 PID:2801 INFO params.py pop] dataset_reader.lazy = False
+[2019-12-02 16:00:04,000 PID:2801 INFO multiwoz.py __init__] MultiWozEnv:
+- e = 0
+- done = False
+- env_spec = {'evaluator': {'name': 'MultiWozEvaluator'},
+ 'max_frame': 1000,
+ 'max_t': 40,
+ 'name': 'multiwoz',
+ 'nlg': {'is_user': True, 'name': 'MultiwozTemplateNLG'},
+ 'nlu': {'model_file': 'https://convlab.blob.core.windows.net/models/milu.tar.gz',
+         'name': 'MILU'},
+ 'sys_policy': {'name': 'RuleBasedMultiwozBot'},
+ 'user_policy': {'name': 'UserPolicyAgendaMultiWoz'}}
+- log_frequency = None
+- frame_op = None
+- frame_op_len = None
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- eval_frequency = 100
+- name = multiwoz
+- max_t = 40
+- max_frame = 1000
+- is_venv = False
+- clock_speed = 1
+- clock = <convlab.env.base.Clock object at 0x7fbd75265198>
+- to_render = False
+- action_dim = 0
+- observation_dim = 0
+- u_env = <convlab.env.multiwoz.MultiWozEnvironment object at 0x7fbd75265438>
+- evaluator = <convlab.evaluator.multiwoz.MultiWozEvaluator object at 0x7fbd7c799860>
+- observation_space = Box(0,)
+- action_space = Discrete(0)
+- observable_dim = {'state': 0}
+- is_discrete = True
+[2019-12-02 16:00:04,007 PID:2801 INFO modeling_utils.py from_pretrained] loading configuration file models/v4_1/config.json
+[2019-12-02 16:00:04,008 PID:2801 INFO modeling_utils.py from_pretrained] Model config {
+  "attn_pdrop": 0.1,
+  "embd_pdrop": 0.1,
+  "finetuning_task": null,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "num_labels": 1,
+  "output_attentions": true,
+  "output_hidden_states": false,
+  "resid_pdrop": 0.1,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "token_ids",
+  "summary_use_proj": true,
+  "torchscript": false,
+  "vocab_size": 50365
+}
+
+[2019-12-02 16:00:04,008 PID:2801 INFO modeling_utils.py from_pretrained] loading weights file models/v4_1/pytorch_model.bin
+[2019-12-02 16:00:07,389 PID:2801 INFO tokenization_utils.py _from_pretrained] Model name 'models/v4_1' not found in model shortcut name list (gpt2, gpt2-medium). Assuming 'models/v4_1' is a path or url to a directory containing tokenizer files.
+[2019-12-02 16:00:07,389 PID:2801 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1/added_tokens.json. We won't load it.
+[2019-12-02 16:00:07,389 PID:2801 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1/special_tokens_map.json. We won't load it.
+[2019-12-02 16:00:07,390 PID:2801 INFO tokenization_utils.py _from_pretrained] loading file None
+[2019-12-02 16:00:07,390 PID:2801 INFO tokenization_utils.py _from_pretrained] loading file None
+[2019-12-02 16:00:07,390 PID:2801 INFO tokenization_utils.py _from_pretrained] loading file models/v4_1/vocab.json
+[2019-12-02 16:00:07,390 PID:2801 INFO tokenization_utils.py _from_pretrained] loading file models/v4_1/merges.txt
+[2019-12-02 16:00:07,456 PID:2801 INFO tokenization_utils.py add_tokens] Adding <bos> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <eos> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <user> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <system> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <cs> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <dp> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <pad> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <dc> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <nm> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <leave> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <people> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <arrive> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <pricerange> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <arriveby> to the vocabulary
+[2019-12-02 16:00:07,457 PID:2801 INFO tokenization_utils.py add_tokens] Adding <ticket> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <dest> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <none> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <leaveat> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <car> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <ref> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <department> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <open> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <parking> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <departure> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <day> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <type> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <time> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <stay> to the vocabulary
+[2019-12-02 16:00:07,458 PID:2801 INFO tokenization_utils.py add_tokens] Adding <internet> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <phone> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <choice> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <destination> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <name> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <addr> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <fee> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <area> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <post> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <price> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <depart> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <id> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <food> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <stars> to the vocabulary
+[2019-12-02 16:00:07,459 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant-inform> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant-recommend> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction-request> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel-request> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <general-welcome> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-offerbook> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <booking-request> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant-nooffer> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hospital-inform> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-request> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-nooffer> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <general-bye> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel-select> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <taxi-inform> to the vocabulary
+[2019-12-02 16:00:07,460 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction-select> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction-nooffer> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <booking-inform> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-offerbooked> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <general-greet> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-inform> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train-select> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <booking-nobook> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <police-inform> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <taxi-request> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction-inform> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant-select> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel-recommend> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <booking-book> to the vocabulary
+[2019-12-02 16:00:07,461 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hospital-request> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <general-reqmore> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant-request> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel-nooffer> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel-inform> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction-recommend> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hotel> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <police> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <restaurant> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <train> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <hospital> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <taxi> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding <attraction> to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding [restaurant_phone] to the vocabulary
+[2019-12-02 16:00:07,462 PID:2801 INFO tokenization_utils.py add_tokens] Adding [restaurant_reference] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [restaurant_postcode] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [restaurant_addr] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [restaurant_name] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hotel_phone] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hotel_reference] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hotel_postcode] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hotel_addr] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hotel_name] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [attraction_phone] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [attraction_postcode] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [attraction_addr] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [attraction_name] to the vocabulary
+[2019-12-02 16:00:07,463 PID:2801 INFO tokenization_utils.py add_tokens] Adding [train_reference] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [train_id] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [taxi_phone] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hospital_phone] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hospital_postcode] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hospital_addr] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [hospital_name] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [police_phone] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [police_postcode] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [police_addr] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_tokens] Adding [police_name] to the vocabulary
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <bos> to the <bos> key of the tokenizer
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <eos> to the <eos> key of the tokenizer
+[2019-12-02 16:00:07,464 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <user> to the <user> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <system> to the <system> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <cs> to the <cs> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <dp> to the <dp> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <pad> to the <pad> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <dc> to the <dc> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <nm> to the <nm> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <leave> to the <leave> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <people> to the <people> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <arrive> to the <arrive> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <pricerange> to the <pricerange> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <arriveby> to the <arriveby> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <ticket> to the <ticket> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <dest> to the <dest> key of the tokenizer
+[2019-12-02 16:00:07,465 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <none> to the <none> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <leaveat> to the <leaveat> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <car> to the <car> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <ref> to the <ref> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <department> to the <department> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <open> to the <open> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <parking> to the <parking> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <departure> to the <departure> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <day> to the <day> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <type> to the <type> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <time> to the <time> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <stay> to the <stay> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <internet> to the <internet> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <phone> to the <phone> key of the tokenizer
+[2019-12-02 16:00:07,466 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <choice> to the <choice> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <destination> to the <destination> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <name> to the <name> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <addr> to the <addr> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <fee> to the <fee> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <area> to the <area> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <post> to the <post> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <price> to the <price> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <depart> to the <depart> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <id> to the <id> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <food> to the <food> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <stars> to the <stars> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-inform> to the <restaurant-inform> key of the tokenizer
+[2019-12-02 16:00:07,467 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-recommend> to the <restaurant-recommend> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-request> to the <attraction-request> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-request> to the <hotel-request> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <general-welcome> to the <general-welcome> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-offerbook> to the <train-offerbook> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <booking-request> to the <booking-request> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-nooffer> to the <restaurant-nooffer> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hospital-inform> to the <hospital-inform> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-request> to the <train-request> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-nooffer> to the <train-nooffer> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <general-bye> to the <general-bye> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-select> to the <hotel-select> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <taxi-inform> to the <taxi-inform> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-select> to the <attraction-select> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-nooffer> to the <attraction-nooffer> key of the tokenizer
+[2019-12-02 16:00:07,468 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <booking-inform> to the <booking-inform> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-offerbooked> to the <train-offerbooked> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <general-greet> to the <general-greet> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-inform> to the <train-inform> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train-select> to the <train-select> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <booking-nobook> to the <booking-nobook> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <police-inform> to the <police-inform> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <taxi-request> to the <taxi-request> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-inform> to the <attraction-inform> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-select> to the <restaurant-select> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-recommend> to the <hotel-recommend> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <booking-book> to the <booking-book> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hospital-request> to the <hospital-request> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <general-reqmore> to the <general-reqmore> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-request> to the <restaurant-request> key of the tokenizer
+[2019-12-02 16:00:07,469 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-nooffer> to the <hotel-nooffer> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-inform> to the <hotel-inform> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-recommend> to the <attraction-recommend> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hotel> to the <hotel> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <police> to the <police> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant> to the <restaurant> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <train> to the <train> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <hospital> to the <hospital> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <taxi> to the <taxi> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning <attraction> to the <attraction> key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_phone] to the [restaurant_phone] key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_reference] to the [restaurant_reference] key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_postcode] to the [restaurant_postcode] key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_addr] to the [restaurant_addr] key of the tokenizer
+[2019-12-02 16:00:07,470 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_name] to the [restaurant_name] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_phone] to the [hotel_phone] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_reference] to the [hotel_reference] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_postcode] to the [hotel_postcode] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_addr] to the [hotel_addr] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_name] to the [hotel_name] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_phone] to the [attraction_phone] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_postcode] to the [attraction_postcode] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_addr] to the [attraction_addr] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_name] to the [attraction_name] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [train_reference] to the [train_reference] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [train_id] to the [train_id] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [taxi_phone] to the [taxi_phone] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_phone] to the [hospital_phone] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_postcode] to the [hospital_postcode] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_addr] to the [hospital_addr] key of the tokenizer
+[2019-12-02 16:00:07,471 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_name] to the [hospital_name] key of the tokenizer
+[2019-12-02 16:00:07,472 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [police_phone] to the [police_phone] key of the tokenizer
+[2019-12-02 16:00:07,472 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [police_postcode] to the [police_postcode] key of the tokenizer
+[2019-12-02 16:00:07,472 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [police_addr] to the [police_addr] key of the tokenizer
+[2019-12-02 16:00:07,472 PID:2801 INFO tokenization_utils.py add_special_tokens] Assigning [police_name] to the [police_name] key of the tokenizer
+[2019-12-02 16:00:09,787 PID:2801 INFO base.py __init__] ExternalPolicy:
+- agent = <convlab.agent.DialogAgent object at 0x7fbd2c371358>
+- algorithm_spec = {'action_pdtype': 'Argmax',
+ 'action_policy': 'default',
+ 'e2e': {'max_history': 15,
+         'model': 'gpt2_v4',
+         'model_checkpoint': 'models/v4_1',
+         'name': 'Transformer',
+         'no_sample': 0,
+         'top_p': 0.8},
+ 'name': 'ExternalPolicy'}
+- name = ExternalPolicy
+- net_spec = None
+- memory_spec = {'max_size': 1, 'name': 'Replay'}
+- body = body: {
+  "agent": "<convlab.agent.DialogAgent object at 0x7fbd2c371358>",
+  "env": "<convlab.env.multiwoz.MultiWozEnv object at 0x7fbd75265278>",
+  "aeb": "(0, 0, 0)",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "explore_var": NaN,
+  "entropy_coef": NaN,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "ckpt_total_reward": NaN,
+  "total_reward": 0,
+  "total_reward_ma": NaN,
+  "ma_window": 100,
+  "best_reward_ma": -Infinity,
+  "eval_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(0,)",
+  "action_space": "Discrete(0)",
+  "observable_dim": {
+    "state": 0
+  },
+  "state_dim": 0,
+  "action_dim": 0,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Argmax",
+  "ActionPD": "<class 'convlab.lib.distribution.Argmax'>"
+}
+- action_pdtype = Argmax
+- action_policy = <function default at 0x7fbd74a32c80>
+- policy = <convlab.modules.e2e.multiwoz.Transformer.Transformer.Transformer object at 0x7fbd2c371780>
+[2019-12-02 16:00:09,788 PID:2801 INFO __init__.py __init__] DialogAgent:
+- spec = submission4
+- a = 0
+- agent_spec = {'algorithm': {'action_pdtype': 'Argmax',
+               'action_policy': 'default',
+               'e2e': {'max_history': 15,
+                       'model': 'gpt2_v4',
+                       'model_checkpoint': 'models/v4_1',
+                       'name': 'Transformer',
+                       'no_sample': 0,
+                       'top_p': 0.8},
+               'name': 'ExternalPolicy'},
+ 'memory': {'max_size': 1, 'name': 'Replay'},
+ 'name': 'DialogAgent'}
+- name = DialogAgent
+- nlu = None
+- dst = None
+- state_encoder = None
+- action_decoder = None
+- nlg = None
+- body = body: {
+  "agent": "<convlab.agent.DialogAgent object at 0x7fbd2c371358>",
+  "env": "<convlab.env.multiwoz.MultiWozEnv object at 0x7fbd75265278>",
+  "aeb": "(0, 0, 0)",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "explore_var": NaN,
+  "entropy_coef": NaN,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "ckpt_total_reward": NaN,
+  "total_reward": 0,
+  "total_reward_ma": NaN,
+  "ma_window": 100,
+  "best_reward_ma": -Infinity,
+  "eval_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(0,)",
+  "action_space": "Discrete(0)",
+  "observable_dim": {
+    "state": 0
+  },
+  "state_dim": 0,
+  "action_dim": 0,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Argmax",
+  "ActionPD": "<class 'convlab.lib.distribution.Argmax'>",
+  "memory": "<convlab.agent.memory.replay.Replay object at 0x7fbd2c3ce828>",
+  "state": null,
+  "encoded_state": null,
+  "action": null
+}
+- algorithm = <convlab.agent.algorithm.external.ExternalPolicy object at 0x7fbd2c3714e0>
+- warmup_epi = -1
+[2019-12-02 16:00:10,310 PID:2801 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2019-12-02 16:00:10,310 PID:2801 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmp14fr_4sm
+[2019-12-02 16:00:10,400 PID:2801 INFO params.py pop] type = default
+[2019-12-02 16:00:10,401 PID:2801 INFO vocabulary.py from_files] Loading token dictionary from /tmp/tmp14fr_4sm/vocabulary.
+[2019-12-02 16:00:10,412 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}, 'type': 'milu'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,412 PID:2801 INFO params.py pop] model.type = milu
+[2019-12-02 16:00:10,412 PID:2801 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.model.MILU'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,412 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.type = basic
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.embedder_to_indexer_map = None
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.allow_unmatched_keys = False
+[2019-12-02 16:00:10,413 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = token_characters
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+[2019-12-02 16:00:10,413 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+[2019-12-02 16:00:10,414 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.seq2vec_encoder.Seq2VecEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'} and extras {}
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+[2019-12-02 16:00:10,414 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.cnn_encoder.CnnEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128} and extras {}
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+[2019-12-02 16:00:10,414 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 128
+[2019-12-02 16:00:10,415 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [3]
+[2019-12-02 16:00:10,415 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = relu
+[2019-12-02 16:00:10,415 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+[2019-12-02 16:00:10,415 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+[2019-12-02 16:00:10,415 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,415 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.type = embedding
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.projection_dim = None
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.trainable = True
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.padding_index = None
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.max_norm = None
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+[2019-12-02 16:00:10,416 PID:2801 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.sparse = False
+[2019-12-02 16:00:10,422 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py pop] model.encoder.type = lstm
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py pop] model.encoder.batch_first = True
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py pop] model.encoder.stateful = False
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py log_recursively] model.encoder.bidirectional = True
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py log_recursively] model.encoder.dropout = 0.5
+[2019-12-02 16:00:10,422 PID:2801 INFO params.py log_recursively] model.encoder.hidden_size = 200
+[2019-12-02 16:00:10,423 PID:2801 INFO params.py log_recursively] model.encoder.input_size = 178
+[2019-12-02 16:00:10,423 PID:2801 INFO params.py log_recursively] model.encoder.num_layers = 1
+[2019-12-02 16:00:10,423 PID:2801 INFO params.py log_recursively] model.encoder.batch_first = True
+[2019-12-02 16:00:10,426 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,426 PID:2801 INFO params.py pop] model.intent_encoder.type = lstm
+[2019-12-02 16:00:10,426 PID:2801 INFO params.py pop] model.intent_encoder.batch_first = True
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py pop] model.intent_encoder.stateful = False
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.bidirectional = True
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.dropout = 0.5
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.hidden_size = 200
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.input_size = 400
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.num_layers = 1
+[2019-12-02 16:00:10,427 PID:2801 INFO params.py log_recursively] model.intent_encoder.batch_first = True
+[2019-12-02 16:00:10,432 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,433 PID:2801 INFO params.py pop] model.attention.type = bilinear
+[2019-12-02 16:00:10,433 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {'matrix_dim': 400, 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-12-02 16:00:10,433 PID:2801 INFO params.py pop] model.attention.vector_dim = 400
+[2019-12-02 16:00:10,433 PID:2801 INFO params.py pop] model.attention.matrix_dim = 400
+[2019-12-02 16:00:10,433 PID:2801 INFO params.py pop] model.attention.normalize = True
+[2019-12-02 16:00:10,434 PID:2801 INFO params.py pop] model.context_for_intent = True
+[2019-12-02 16:00:10,434 PID:2801 INFO params.py pop] model.context_for_tag = False
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.attention_for_intent = False
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.attention_for_tag = False
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.sequence_label_namespace = labels
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.intent_label_namespace = intent_labels
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.label_encoding = BIO
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.include_start_end_transitions = False
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.crf_decoding = False
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.constrain_crf_decoding = None
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.focal_loss_gamma = None
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.nongeneral_intent_weight = 5.0
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.num_train_examples = None
+[2019-12-02 16:00:10,435 PID:2801 INFO params.py pop] model.calculate_span_f1 = None
+[2019-12-02 16:00:10,436 PID:2801 INFO params.py pop] model.dropout = 0.3
+[2019-12-02 16:00:10,436 PID:2801 INFO params.py pop] model.verbose_metrics = False
+[2019-12-02 16:00:10,436 PID:2801 INFO params.py pop] model.regularizer = [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]]
+[2019-12-02 16:00:10,436 PID:2801 INFO params.py pop] model.regularizer.list.list.type = l2
+[2019-12-02 16:00:10,491 PID:2801 INFO initializers.py __call__] Initializing parameters
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__] Done initializing parameters; the following parameters are using their default initialization from their code
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    attention._bias
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    attention._weight_matrix
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.bias_hh_l0
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.bias_hh_l0_reverse
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.bias_ih_l0
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.bias_ih_l0_reverse
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.weight_hh_l0
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.weight_hh_l0_reverse
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.weight_ih_l0
+[2019-12-02 16:00:10,492 PID:2801 INFO initializers.py __call__]    encoder._module.weight_ih_l0_reverse
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0_reverse
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0_reverse
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0_reverse
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0_reverse
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_projection_layer.bias
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    intent_projection_layer.weight
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    tag_projection_layer._module.bias
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    tag_projection_layer._module.weight
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+[2019-12-02 16:00:10,493 PID:2801 INFO initializers.py __call__]    text_field_embedder.token_embedder_tokens.weight
+[2019-12-02 16:00:10,499 PID:2801 INFO from_params.py from_params] instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}, 'type': 'milu'} and extras {}
+[2019-12-02 16:00:10,499 PID:2801 INFO params.py pop] dataset_reader.type = milu
+[2019-12-02 16:00:10,499 PID:2801 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.dataset_reader.MILUDatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}} and extras {}
+[2019-12-02 16:00:10,499 PID:2801 INFO params.py pop] dataset_reader.context_size = 5
+[2019-12-02 16:00:10,500 PID:2801 INFO params.py pop] dataset_reader.agent = None
+[2019-12-02 16:00:10,500 PID:2801 INFO params.py pop] dataset_reader.random_context_size = True
+[2019-12-02 16:00:10,500 PID:2801 INFO params.py pop] dataset_reader.token_delimiter = None
+[2019-12-02 16:00:10,500 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'min_padding_length': 3, 'type': 'characters'} and extras {}
+[2019-12-02 16:00:10,500 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.type = characters
+[2019-12-02 16:00:10,500 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_characters_indexer.TokenCharactersIndexer from params {'min_padding_length': 3} and extras {}
+[2019-12-02 16:00:10,500 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.namespace = token_characters
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.start_tokens = None
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.end_tokens = None
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.token_characters.min_padding_length = 3
+[2019-12-02 16:00:10,501 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'lowercase_tokens': True, 'type': 'single_id'} and extras {}
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.type = single_id
+[2019-12-02 16:00:10,501 PID:2801 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'lowercase_tokens': True} and extras {}
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.namespace = tokens
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.lowercase_tokens = True
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.start_tokens = None
+[2019-12-02 16:00:10,501 PID:2801 INFO params.py pop] dataset_reader.token_indexers.tokens.end_tokens = None
+[2019-12-02 16:00:10,502 PID:2801 INFO params.py pop] dataset_reader.lazy = False
+[2019-12-02 16:00:10,534 PID:2801 INFO multiwoz.py __init__] MultiWozEnv:
+- e = 0
+- done = False
+- env_spec = {'evaluator': {'name': 'MultiWozEvaluator'},
+ 'max_frame': 1000,
+ 'max_t': 40,
+ 'name': 'multiwoz',
+ 'nlg': {'is_user': True, 'name': 'MultiwozTemplateNLG'},
+ 'nlu': {'model_file': 'https://convlab.blob.core.windows.net/models/milu.tar.gz',
+         'name': 'MILU'},
+ 'sys_policy': {'name': 'RuleBasedMultiwozBot'},
+ 'user_policy': {'name': 'UserPolicyAgendaMultiWoz'}}
+- log_frequency = None
+- frame_op = None
+- frame_op_len = None
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- eval_frequency = 100
+- name = multiwoz
+- max_t = 40
+- max_frame = 1000
+- is_venv = False
+- clock_speed = 1
+- clock = <convlab.env.base.Clock object at 0x7fbd2c36ee80>
+- to_render = False
+- action_dim = 0
+- observation_dim = 0
+- u_env = <convlab.env.multiwoz.MultiWozEnvironment object at 0x7fbd0f441908>
+- evaluator = <convlab.evaluator.multiwoz.MultiWozEvaluator object at 0x7fbd0f036a20>
+- observation_space = Box(0,)
+- action_space = Discrete(0)
+- observable_dim = {'state': 0}
+- is_discrete = True
+[2019-12-02 16:00:10,535 PID:2801 INFO logger.py info] Session:
+- spec = submission4
+- index = 0
+- agent = <convlab.agent.DialogAgent object at 0x7fbd2c371358>
+- env = <convlab.env.multiwoz.MultiWozEnv object at 0x7fbd75265278>
+- eval_env = <convlab.env.multiwoz.MultiWozEnv object at 0x7fbd2c36e358>
+- num_eval = 100
+- warmup_epi = -1
+[2019-12-02 16:00:10,558 PID:2801 ACT logger.py act] User action: {'Train-Inform': [['Day', 'thursday']]}
+[2019-12-02 16:00:10,558 PID:2801 ACT logger.py act] Goal: {'train': {'info': {'destination': 'cambridge', 'day': 'thursday', 'arriveBy': '17:15', 'departure': 'cambridge'}, 'reqt': {'leaveAt': '?', 'price': '?'}, 'book': {'people': '5'}, 'booked': '?'}, 'restaurant': {'info': {'pricerange': 'cheap'}, 'reqt': {'address': '?'}}}
+[2019-12-02 16:00:10,558 PID:2801 NL logger.py nl] User utterance: I need to travel on thursday .
+[2019-12-02 16:00:10,559 PID:2801 ACT logger.py act] Inferred user action: I need to travel on thursday .
+[2019-12-02 16:00:10,559 PID:2801 STATE logger.py state] Dialog state: I need to travel on thursday .
+[2019-12-02 16:00:10,747 PID:2801 INFO archival.py _cleanup_archive_dir] removing temporary unarchived model dir at /tmp/tmp14fr_4sm
+[2019-12-02 16:00:10,749 PID:2801 INFO archival.py _cleanup_archive_dir] removing temporary unarchived model dir at /tmp/tmprlwac23b

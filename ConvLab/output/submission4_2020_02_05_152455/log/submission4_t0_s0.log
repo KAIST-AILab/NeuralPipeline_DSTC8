@@ -1,0 +1,187 @@
+[2020-02-05 15:24:56,310 PID:22050 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2020-02-05 15:24:56,313 PID:22050 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmpe5rqk46n
+[2020-02-05 15:24:56,438 PID:22050 INFO params.py pop] type = default
+[2020-02-05 15:24:56,438 PID:22050 INFO vocabulary.py from_files] Loading token dictionary from /tmp/tmpe5rqk46n/vocabulary.
+[2020-02-05 15:24:56,451 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}, 'type': 'milu'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,452 PID:22050 INFO params.py pop] model.type = milu
+[2020-02-05 15:24:56,452 PID:22050 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.model.MILU'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,452 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,452 PID:22050 INFO params.py pop] model.text_field_embedder.type = basic
+[2020-02-05 15:24:56,452 PID:22050 INFO params.py pop] model.text_field_embedder.embedder_to_indexer_map = None
+[2020-02-05 15:24:56,452 PID:22050 INFO params.py pop] model.text_field_embedder.allow_unmatched_keys = False
+[2020-02-05 15:24:56,453 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = token_characters
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+[2020-02-05 15:24:56,453 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+[2020-02-05 15:24:56,454 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+[2020-02-05 15:24:56,458 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.seq2vec_encoder.Seq2VecEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'} and extras {}
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+[2020-02-05 15:24:56,459 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.cnn_encoder.CnnEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128} and extras {}
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 128
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [3]
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = relu
+[2020-02-05 15:24:56,459 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+[2020-02-05 15:24:56,462 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+[2020-02-05 15:24:56,462 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,462 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.type = embedding
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.projection_dim = None
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.trainable = True
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.padding_index = None
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.max_norm = None
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+[2020-02-05 15:24:56,463 PID:22050 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.sparse = False
+[2020-02-05 15:24:56,471 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py pop] model.encoder.type = lstm
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py pop] model.encoder.batch_first = True
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py pop] model.encoder.stateful = False
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.bidirectional = True
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.dropout = 0.5
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.hidden_size = 200
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.input_size = 178
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.num_layers = 1
+[2020-02-05 15:24:56,471 PID:22050 INFO params.py log_recursively] model.encoder.batch_first = True
+[2020-02-05 15:24:56,476 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,476 PID:22050 INFO params.py pop] model.intent_encoder.type = lstm
+[2020-02-05 15:24:56,476 PID:22050 INFO params.py pop] model.intent_encoder.batch_first = True
+[2020-02-05 15:24:56,476 PID:22050 INFO params.py pop] model.intent_encoder.stateful = False
+[2020-02-05 15:24:56,476 PID:22050 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.bidirectional = True
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.dropout = 0.5
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.hidden_size = 200
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.input_size = 400
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.num_layers = 1
+[2020-02-05 15:24:56,477 PID:22050 INFO params.py log_recursively] model.intent_encoder.batch_first = True
+[2020-02-05 15:24:56,484 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,484 PID:22050 INFO params.py pop] model.attention.type = bilinear
+[2020-02-05 15:24:56,484 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {'matrix_dim': 400, 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*tags', '*labels'}}
+[2020-02-05 15:24:56,484 PID:22050 INFO params.py pop] model.attention.vector_dim = 400
+[2020-02-05 15:24:56,484 PID:22050 INFO params.py pop] model.attention.matrix_dim = 400
+[2020-02-05 15:24:56,484 PID:22050 INFO params.py pop] model.attention.normalize = True
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.context_for_intent = True
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.context_for_tag = False
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.attention_for_intent = False
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.attention_for_tag = False
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.sequence_label_namespace = labels
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.intent_label_namespace = intent_labels
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.label_encoding = BIO
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.include_start_end_transitions = False
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.crf_decoding = False
+[2020-02-05 15:24:56,488 PID:22050 INFO params.py pop] model.constrain_crf_decoding = None
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.focal_loss_gamma = None
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.nongeneral_intent_weight = 5.0
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.num_train_examples = None
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.calculate_span_f1 = None
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.dropout = 0.3
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.verbose_metrics = False
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.regularizer = [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]]
+[2020-02-05 15:24:56,489 PID:22050 INFO params.py pop] model.regularizer.list.list.type = l2
+[2020-02-05 15:24:56,546 PID:22050 INFO initializers.py __call__] Initializing parameters
+[2020-02-05 15:24:56,546 PID:22050 INFO initializers.py __call__] Done initializing parameters; the following parameters are using their default initialization from their code
+[2020-02-05 15:24:56,546 PID:22050 INFO initializers.py __call__]    attention._bias
+[2020-02-05 15:24:56,546 PID:22050 INFO initializers.py __call__]    attention._weight_matrix
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.bias_hh_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.bias_hh_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.bias_ih_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.bias_ih_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.weight_hh_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.weight_hh_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.weight_ih_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    encoder._module.weight_ih_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0_reverse
+[2020-02-05 15:24:56,547 PID:22050 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0_reverse
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    intent_projection_layer.bias
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    intent_projection_layer.weight
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    tag_projection_layer._module.bias
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    tag_projection_layer._module.weight
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+[2020-02-05 15:24:56,548 PID:22050 INFO initializers.py __call__]    text_field_embedder.token_embedder_tokens.weight
+[2020-02-05 15:24:56,902 PID:22050 INFO from_params.py from_params] instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}, 'type': 'milu'} and extras {}
+[2020-02-05 15:24:56,902 PID:22050 INFO params.py pop] dataset_reader.type = milu
+[2020-02-05 15:24:56,902 PID:22050 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.dataset_reader.MILUDatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}} and extras {}
+[2020-02-05 15:24:56,902 PID:22050 INFO params.py pop] dataset_reader.context_size = 5
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.agent = None
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.random_context_size = True
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_delimiter = None
+[2020-02-05 15:24:56,903 PID:22050 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'min_padding_length': 3, 'type': 'characters'} and extras {}
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_indexers.token_characters.type = characters
+[2020-02-05 15:24:56,903 PID:22050 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_characters_indexer.TokenCharactersIndexer from params {'min_padding_length': 3} and extras {}
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_indexers.token_characters.namespace = token_characters
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_indexers.token_characters.start_tokens = None
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_indexers.token_characters.end_tokens = None
+[2020-02-05 15:24:56,903 PID:22050 INFO params.py pop] dataset_reader.token_indexers.token_characters.min_padding_length = 3
+[2020-02-05 15:24:56,903 PID:22050 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'lowercase_tokens': True, 'type': 'single_id'} and extras {}
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.token_indexers.tokens.type = single_id
+[2020-02-05 15:24:56,904 PID:22050 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'lowercase_tokens': True} and extras {}
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.token_indexers.tokens.namespace = tokens
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.token_indexers.tokens.lowercase_tokens = True
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.token_indexers.tokens.start_tokens = None
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.token_indexers.tokens.end_tokens = None
+[2020-02-05 15:24:56,904 PID:22050 INFO params.py pop] dataset_reader.lazy = False
+[2020-02-05 15:24:56,940 PID:22050 INFO multiwoz.py __init__] MultiWozEnv:
+- e = 0
+- done = False
+- env_spec = {'evaluator': {'name': 'MultiWozEvaluator'},
+ 'max_frame': 1000,
+ 'max_t': 40,
+ 'name': 'multiwoz',
+ 'nlg': {'is_user': True, 'name': 'MultiwozTemplateNLG'},
+ 'nlu': {'model_file': 'https://convlab.blob.core.windows.net/models/milu.tar.gz',
+         'name': 'MILU'},
+ 'sys_policy': {'name': 'RuleBasedMultiwozBot'},
+ 'user_policy': {'name': 'UserPolicyAgendaMultiWoz'}}
+- log_frequency = None
+- frame_op = None
+- frame_op_len = None
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- eval_frequency = 100
+- name = multiwoz
+- max_t = 40
+- max_frame = 1000
+- is_venv = False
+- clock_speed = 1
+- clock = <convlab.env.base.Clock object at 0x7f1dcf702eb8>
+- to_render = False
+- action_dim = 0
+- observation_dim = 0
+- u_env = <convlab.env.multiwoz.MultiWozEnvironment object at 0x7f1e0810a240>
+- evaluator = <convlab.evaluator.multiwoz.MultiWozEvaluator object at 0x7f1dcf6b5c88>
+- observation_space = Box(0,)
+- action_space = Discrete(0)
+- observable_dim = {'state': 0}
+- is_discrete = True
+[2020-02-05 15:28:53,182 PID:22050 ERROR modeling_utils.py from_pretrained] Model name 'models/v4_1' was not found in model name list (gpt2, gpt2-medium). We assumed 'models/v4_1' was a path or url but couldn't find any file associated to this path or url.
+[2020-02-05 15:28:53,182 PID:22050 ERROR modeling_utils.py from_pretrained] Model name 'models/v4_1' was not found in model name list (gpt2, gpt2-medium). We assumed 'models/v4_1' was a path or url but couldn't find any file associated to this path or url.
+[2020-02-05 15:28:53,182 PID:22050 INFO tokenization_utils.py _from_pretrained] Model name 'models/v4_1' not found in model shortcut name list (gpt2, gpt2-medium). Assuming 'models/v4_1' is a path or url to a directory containing tokenizer files.
+[2020-02-05 15:28:53,182 PID:22050 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1. We won't load it.
+[2020-02-05 15:28:53,182 PID:22050 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1. We won't load it.
+[2020-02-05 15:28:53,182 PID:22050 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1. We won't load it.
+[2020-02-05 15:28:53,182 PID:22050 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4_1. We won't load it.
+[2020-02-05 15:28:53,183 PID:22050 ERROR tokenization_utils.py _from_pretrained] Model name 'models/v4_1' was not found in model name list (gpt2, gpt2-medium). We assumed 'models/v4_1' was a path or url but couldn't find tokenizer filesat this path or url.
+[2020-02-05 15:28:53,183 PID:22050 INFO archival.py _cleanup_archive_dir] removing temporary unarchived model dir at /tmp/tmpe5rqk46n

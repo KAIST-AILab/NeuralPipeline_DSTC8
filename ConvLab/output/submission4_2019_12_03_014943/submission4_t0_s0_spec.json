@@ -1,0 +1,79 @@
+{
+  "agent": [
+    {
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "max_history": 15,
+          "model": "gpt2_v4",
+          "no_sample": 1,
+          "top_p": 0.8,
+          "model_checkpoint": "models/v4_1"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }
+  ],
+  "env": [
+    {
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }
+  ],
+  "body": {
+    "product": "outer",
+    "num": 1
+  },
+  "meta": {
+    "distributed": false,
+    "eval_frequency": 100,
+    "num_eval": 500,
+    "max_tick_unit": "total_t",
+    "max_trial": 1,
+    "max_session": 1,
+    "resources": {
+      "num_cpus": 1,
+      "num_gpus": 0
+    },
+    "experiment": 0,
+    "trial": 0,
+    "session": 0,
+    "cuda_offset": 0,
+    "experiment_ts": "2019_12_03_014943",
+    "prepath": "output/submission4_2019_12_03_014943/submission4_t0_s0",
+    "ckpt": null,
+    "git_sha": "38533ee0fedbc20ea6f050ca86b2530929b97a32",
+    "random_seed": 1575305383,
+    "eval_model_prepath": null,
+    "graph_prepath": "output/submission4_2019_12_03_014943/graph/submission4_t0_s0",
+    "info_prepath": "output/submission4_2019_12_03_014943/info/submission4_t0_s0",
+    "log_prepath": "output/submission4_2019_12_03_014943/log/submission4_t0_s0",
+    "model_prepath": "output/submission4_2019_12_03_014943/model/submission4_t0_s0"
+  },
+  "name": "submission4"
+}

@@ -1,0 +1,1430 @@
+[2019-11-21 19:25:05,205 PID:23786 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2019-11-21 19:25:05,208 PID:23786 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmp7mcnbk8_
+[2019-11-21 19:25:05,332 PID:23786 INFO params.py pop] type = default
+[2019-11-21 19:25:05,332 PID:23786 INFO vocabulary.py from_files] Loading token dictionary from /tmp/tmp7mcnbk8_/vocabulary.
+[2019-11-21 19:25:05,345 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}, 'type': 'milu'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,345 PID:23786 INFO params.py pop] model.type = milu
+[2019-11-21 19:25:05,346 PID:23786 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.model.MILU'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,346 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,346 PID:23786 INFO params.py pop] model.text_field_embedder.type = basic
+[2019-11-21 19:25:05,346 PID:23786 INFO params.py pop] model.text_field_embedder.embedder_to_indexer_map = None
+[2019-11-21 19:25:05,346 PID:23786 INFO params.py pop] model.text_field_embedder.allow_unmatched_keys = False
+[2019-11-21 19:25:05,346 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,346 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = token_characters
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+[2019-11-21 19:25:05,347 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+[2019-11-21 19:25:05,348 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.seq2vec_encoder.Seq2VecEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'} and extras {}
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+[2019-11-21 19:25:05,348 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.cnn_encoder.CnnEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128} and extras {}
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 128
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [3]
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = relu
+[2019-11-21 19:25:05,348 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+[2019-11-21 19:25:05,350 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+[2019-11-21 19:25:05,350 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,350 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.type = embedding
+[2019-11-21 19:25:05,350 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+[2019-11-21 19:25:05,350 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+[2019-11-21 19:25:05,350 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.projection_dim = None
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.trainable = True
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.padding_index = None
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.max_norm = None
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+[2019-11-21 19:25:05,351 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.sparse = False
+[2019-11-21 19:25:05,358 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py pop] model.encoder.type = lstm
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py pop] model.encoder.batch_first = True
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py pop] model.encoder.stateful = False
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.bidirectional = True
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.dropout = 0.5
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.hidden_size = 200
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.input_size = 178
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.num_layers = 1
+[2019-11-21 19:25:05,358 PID:23786 INFO params.py log_recursively] model.encoder.batch_first = True
+[2019-11-21 19:25:05,363 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,363 PID:23786 INFO params.py pop] model.intent_encoder.type = lstm
+[2019-11-21 19:25:05,363 PID:23786 INFO params.py pop] model.intent_encoder.batch_first = True
+[2019-11-21 19:25:05,363 PID:23786 INFO params.py pop] model.intent_encoder.stateful = False
+[2019-11-21 19:25:05,363 PID:23786 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.bidirectional = True
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.dropout = 0.5
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.hidden_size = 200
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.input_size = 400
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.num_layers = 1
+[2019-11-21 19:25:05,364 PID:23786 INFO params.py log_recursively] model.intent_encoder.batch_first = True
+[2019-11-21 19:25:05,370 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,371 PID:23786 INFO params.py pop] model.attention.type = bilinear
+[2019-11-21 19:25:05,371 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {'matrix_dim': 400, 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:25:05,371 PID:23786 INFO params.py pop] model.attention.vector_dim = 400
+[2019-11-21 19:25:05,371 PID:23786 INFO params.py pop] model.attention.matrix_dim = 400
+[2019-11-21 19:25:05,371 PID:23786 INFO params.py pop] model.attention.normalize = True
+[2019-11-21 19:25:05,372 PID:23786 INFO params.py pop] model.context_for_intent = True
+[2019-11-21 19:25:05,372 PID:23786 INFO params.py pop] model.context_for_tag = False
+[2019-11-21 19:25:05,372 PID:23786 INFO params.py pop] model.attention_for_intent = False
+[2019-11-21 19:25:05,372 PID:23786 INFO params.py pop] model.attention_for_tag = False
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.sequence_label_namespace = labels
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.intent_label_namespace = intent_labels
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.label_encoding = BIO
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.include_start_end_transitions = False
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.crf_decoding = False
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.constrain_crf_decoding = None
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.focal_loss_gamma = None
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.nongeneral_intent_weight = 5.0
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.num_train_examples = None
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.calculate_span_f1 = None
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.dropout = 0.3
+[2019-11-21 19:25:05,373 PID:23786 INFO params.py pop] model.verbose_metrics = False
+[2019-11-21 19:25:05,374 PID:23786 INFO params.py pop] model.regularizer = [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]]
+[2019-11-21 19:25:05,374 PID:23786 INFO params.py pop] model.regularizer.list.list.type = l2
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__] Initializing parameters
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__] Done initializing parameters; the following parameters are using their default initialization from their code
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__]    attention._bias
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__]    attention._weight_matrix
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__]    encoder._module.bias_hh_l0
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__]    encoder._module.bias_hh_l0_reverse
+[2019-11-21 19:25:05,435 PID:23786 INFO initializers.py __call__]    encoder._module.bias_ih_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    encoder._module.bias_ih_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    encoder._module.weight_hh_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    encoder._module.weight_hh_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    encoder._module.weight_ih_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    encoder._module.weight_ih_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0_reverse
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_projection_layer.bias
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    intent_projection_layer.weight
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    tag_projection_layer._module.bias
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    tag_projection_layer._module.weight
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+[2019-11-21 19:25:05,436 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+[2019-11-21 19:25:05,437 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+[2019-11-21 19:25:05,437 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_tokens.weight
+[2019-11-21 19:25:05,445 PID:23786 WARNING util.py get_spacy_model] Spacy models 'en_core_web_sm' not found.  Downloading and installing.
+[2019-11-21 19:29:40,128 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}, 'type': 'milu'} and extras {}
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.type = milu
+[2019-11-21 19:29:40,129 PID:23786 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.dataset_reader.MILUDatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}} and extras {}
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.context_size = 5
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.agent = None
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.random_context_size = True
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.token_delimiter = None
+[2019-11-21 19:29:40,129 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'min_padding_length': 3, 'type': 'characters'} and extras {}
+[2019-11-21 19:29:40,129 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.type = characters
+[2019-11-21 19:29:40,129 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_characters_indexer.TokenCharactersIndexer from params {'min_padding_length': 3} and extras {}
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.namespace = token_characters
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.start_tokens = None
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.end_tokens = None
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.min_padding_length = 3
+[2019-11-21 19:29:40,130 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'lowercase_tokens': True, 'type': 'single_id'} and extras {}
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.type = single_id
+[2019-11-21 19:29:40,130 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'lowercase_tokens': True} and extras {}
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.namespace = tokens
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.lowercase_tokens = True
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.start_tokens = None
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.end_tokens = None
+[2019-11-21 19:29:40,130 PID:23786 INFO params.py pop] dataset_reader.lazy = False
+[2019-11-21 19:29:40,181 PID:23786 INFO multiwoz.py __init__] MultiWozEnv:
+- e = 0
+- done = False
+- env_spec = {'evaluator': {'name': 'MultiWozEvaluator'},
+ 'max_frame': 1000,
+ 'max_t': 40,
+ 'name': 'multiwoz',
+ 'nlg': {'is_user': True, 'name': 'MultiwozTemplateNLG'},
+ 'nlu': {'model_file': 'https://convlab.blob.core.windows.net/models/milu.tar.gz',
+         'name': 'MILU'},
+ 'sys_policy': {'name': 'RuleBasedMultiwozBot'},
+ 'user_policy': {'name': 'UserPolicyAgendaMultiWoz'}}
+- log_frequency = None
+- frame_op = None
+- frame_op_len = None
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- eval_frequency = 100
+- name = multiwoz
+- max_t = 40
+- max_frame = 1000
+- is_venv = False
+- clock_speed = 1
+- clock = <convlab.env.base.Clock object at 0x7fd73ebe3048>
+- to_render = False
+- action_dim = 0
+- observation_dim = 0
+- u_env = <convlab.env.multiwoz.MultiWozEnvironment object at 0x7fd73ebe3128>
+- evaluator = <convlab.evaluator.multiwoz.MultiWozEvaluator object at 0x7fd71217cc88>
+- observation_space = Box(0,)
+- action_space = Discrete(0)
+- observable_dim = {'state': 0}
+- is_discrete = True
+[2019-11-21 19:33:38,491 PID:23786 INFO modeling_utils.py from_pretrained] loading configuration file models/v4/config.json
+[2019-11-21 19:33:38,492 PID:23786 INFO modeling_utils.py from_pretrained] Model config {
+  "attn_pdrop": 0.1,
+  "embd_pdrop": 0.1,
+  "finetuning_task": null,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "num_labels": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "resid_pdrop": 0.1,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "token_ids",
+  "summary_use_proj": true,
+  "torchscript": false,
+  "vocab_size": 50360
+}
+
+[2019-11-21 19:33:38,495 PID:23786 INFO modeling_utils.py from_pretrained] loading weights file models/v4/pytorch_model.bin
+[2019-11-21 19:33:41,892 PID:23786 INFO tokenization_utils.py _from_pretrained] Model name 'models/v4' not found in model shortcut name list (gpt2, gpt2-medium). Assuming 'models/v4' is a path or url to a directory containing tokenizer files.
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4/added_tokens.json. We won't load it.
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] Didn't find file models/v4/special_tokens_map.json. We won't load it.
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] loading file None
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] loading file None
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] loading file models/v4/vocab.json
+[2019-11-21 19:33:41,893 PID:23786 INFO tokenization_utils.py _from_pretrained] loading file models/v4/merges.txt
+[2019-11-21 19:33:41,971 PID:23786 INFO tokenization_utils.py add_tokens] Adding <bos> to the vocabulary
+[2019-11-21 19:33:41,971 PID:23786 INFO tokenization_utils.py add_tokens] Adding <eos> to the vocabulary
+[2019-11-21 19:33:41,974 PID:23786 INFO tokenization_utils.py add_tokens] Adding <user> to the vocabulary
+[2019-11-21 19:33:41,974 PID:23786 INFO tokenization_utils.py add_tokens] Adding <system> to the vocabulary
+[2019-11-21 19:33:41,974 PID:23786 INFO tokenization_utils.py add_tokens] Adding <cs> to the vocabulary
+[2019-11-21 19:33:41,974 PID:23786 INFO tokenization_utils.py add_tokens] Adding <dp> to the vocabulary
+[2019-11-21 19:33:41,974 PID:23786 INFO tokenization_utils.py add_tokens] Adding <pad> to the vocabulary
+[2019-11-21 19:33:41,975 PID:23786 INFO tokenization_utils.py add_tokens] Adding <dc> to the vocabulary
+[2019-11-21 19:33:41,975 PID:23786 INFO tokenization_utils.py add_tokens] Adding <nm> to the vocabulary
+[2019-11-21 19:33:41,975 PID:23786 INFO tokenization_utils.py add_tokens] Adding <parking> to the vocabulary
+[2019-11-21 19:33:41,975 PID:23786 INFO tokenization_utils.py add_tokens] Adding <post> to the vocabulary
+[2019-11-21 19:33:41,975 PID:23786 INFO tokenization_utils.py add_tokens] Adding <ticket> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <ref> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <people> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <open> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <internet> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <leave> to the vocabulary
+[2019-11-21 19:33:41,976 PID:23786 INFO tokenization_utils.py add_tokens] Adding <area> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <type> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <phone> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <none> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <fee> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <time> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <depart> to the vocabulary
+[2019-11-21 19:33:41,977 PID:23786 INFO tokenization_utils.py add_tokens] Adding <dest> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <food> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <id> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <day> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <name> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <choice> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <addr> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <arrive> to the vocabulary
+[2019-11-21 19:33:41,978 PID:23786 INFO tokenization_utils.py add_tokens] Adding <car> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <stars> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <price> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <department> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <stay> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-offerbooked> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-select> to the vocabulary
+[2019-11-21 19:33:41,979 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-inform> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-request> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction-recommend> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-nooffer> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction-nooffer> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <booking-book> to the vocabulary
+[2019-11-21 19:33:41,980 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant-inform> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <general-greet> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <general-welcome> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <police-inform> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction-inform> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <booking-inform> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hospital-inform> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <general-bye> to the vocabulary
+[2019-11-21 19:33:41,981 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel-nooffer> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction-request> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant-select> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hospital-request> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction-select> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant-nooffer> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <taxi-inform> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <general-reqmore> to the vocabulary
+[2019-11-21 19:33:41,982 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel-request> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant-request> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <booking-nobook> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <booking-request> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel-select> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <taxi-request> to the vocabulary
+[2019-11-21 19:33:41,983 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train-offerbook> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel-recommend> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel-inform> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant-recommend> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hotel> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <police> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <restaurant> to the vocabulary
+[2019-11-21 19:33:41,984 PID:23786 INFO tokenization_utils.py add_tokens] Adding <train> to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding <hospital> to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding <taxi> to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding <attraction> to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [restaurant_phone] to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [restaurant_reference] to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [restaurant_postcode] to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [restaurant_addr] to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [restaurant_name] to the vocabulary
+[2019-11-21 19:33:41,985 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hotel_phone] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hotel_reference] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hotel_postcode] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hotel_addr] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hotel_name] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [attraction_phone] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [attraction_postcode] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [attraction_addr] to the vocabulary
+[2019-11-21 19:33:41,986 PID:23786 INFO tokenization_utils.py add_tokens] Adding [attraction_name] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [train_reference] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [train_id] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [taxi_phone] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hospital_phone] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hospital_postcode] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hospital_addr] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [hospital_name] to the vocabulary
+[2019-11-21 19:33:41,987 PID:23786 INFO tokenization_utils.py add_tokens] Adding [police_phone] to the vocabulary
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_tokens] Adding [police_postcode] to the vocabulary
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_tokens] Adding [police_addr] to the vocabulary
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_tokens] Adding [police_name] to the vocabulary
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <bos> to the <bos> key of the tokenizer
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <eos> to the <eos> key of the tokenizer
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <user> to the <user> key of the tokenizer
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <system> to the <system> key of the tokenizer
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <cs> to the <cs> key of the tokenizer
+[2019-11-21 19:33:41,988 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <dp> to the <dp> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <pad> to the <pad> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <dc> to the <dc> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <nm> to the <nm> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <parking> to the <parking> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <post> to the <post> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <ticket> to the <ticket> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <ref> to the <ref> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <people> to the <people> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <open> to the <open> key of the tokenizer
+[2019-11-21 19:33:41,989 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <internet> to the <internet> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <leave> to the <leave> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <area> to the <area> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <type> to the <type> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <phone> to the <phone> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <none> to the <none> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <fee> to the <fee> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <time> to the <time> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <depart> to the <depart> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <dest> to the <dest> key of the tokenizer
+[2019-11-21 19:33:41,990 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <food> to the <food> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <id> to the <id> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <day> to the <day> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <name> to the <name> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <choice> to the <choice> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <addr> to the <addr> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <arrive> to the <arrive> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <car> to the <car> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <stars> to the <stars> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <price> to the <price> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <department> to the <department> key of the tokenizer
+[2019-11-21 19:33:41,991 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <stay> to the <stay> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-offerbooked> to the <train-offerbooked> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-select> to the <train-select> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-inform> to the <train-inform> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-request> to the <train-request> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-recommend> to the <attraction-recommend> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-nooffer> to the <train-nooffer> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-nooffer> to the <attraction-nooffer> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <booking-book> to the <booking-book> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-inform> to the <restaurant-inform> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <general-greet> to the <general-greet> key of the tokenizer
+[2019-11-21 19:33:41,992 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <general-welcome> to the <general-welcome> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <police-inform> to the <police-inform> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-inform> to the <attraction-inform> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <booking-inform> to the <booking-inform> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hospital-inform> to the <hospital-inform> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <general-bye> to the <general-bye> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-nooffer> to the <hotel-nooffer> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-request> to the <attraction-request> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-select> to the <restaurant-select> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hospital-request> to the <hospital-request> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction-select> to the <attraction-select> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-nooffer> to the <restaurant-nooffer> key of the tokenizer
+[2019-11-21 19:33:41,993 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <taxi-inform> to the <taxi-inform> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <general-reqmore> to the <general-reqmore> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-request> to the <hotel-request> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-request> to the <restaurant-request> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <booking-nobook> to the <booking-nobook> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <booking-request> to the <booking-request> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-select> to the <hotel-select> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <taxi-request> to the <taxi-request> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train-offerbook> to the <train-offerbook> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-recommend> to the <hotel-recommend> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel-inform> to the <hotel-inform> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant-recommend> to the <restaurant-recommend> key of the tokenizer
+[2019-11-21 19:33:41,994 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hotel> to the <hotel> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <police> to the <police> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <restaurant> to the <restaurant> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <train> to the <train> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <hospital> to the <hospital> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <taxi> to the <taxi> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning <attraction> to the <attraction> key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_phone] to the [restaurant_phone] key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_reference] to the [restaurant_reference] key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_postcode] to the [restaurant_postcode] key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_addr] to the [restaurant_addr] key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [restaurant_name] to the [restaurant_name] key of the tokenizer
+[2019-11-21 19:33:41,995 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_phone] to the [hotel_phone] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_reference] to the [hotel_reference] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_postcode] to the [hotel_postcode] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_addr] to the [hotel_addr] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hotel_name] to the [hotel_name] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_phone] to the [attraction_phone] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_postcode] to the [attraction_postcode] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_addr] to the [attraction_addr] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [attraction_name] to the [attraction_name] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [train_reference] to the [train_reference] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [train_id] to the [train_id] key of the tokenizer
+[2019-11-21 19:33:41,996 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [taxi_phone] to the [taxi_phone] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_phone] to the [hospital_phone] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_postcode] to the [hospital_postcode] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_addr] to the [hospital_addr] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [hospital_name] to the [hospital_name] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [police_phone] to the [police_phone] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [police_postcode] to the [police_postcode] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [police_addr] to the [police_addr] key of the tokenizer
+[2019-11-21 19:33:41,997 PID:23786 INFO tokenization_utils.py add_special_tokens] Assigning [police_name] to the [police_name] key of the tokenizer
+[2019-11-21 19:33:44,988 PID:23786 INFO base.py __init__] ExternalPolicy:
+- agent = <convlab.agent.DialogAgent object at 0x7fd6f5d25f98>
+- algorithm_spec = {'action_pdtype': 'Argmax',
+ 'action_policy': 'default',
+ 'e2e': {'max_history': 15,
+         'model': 'gpt2_v4',
+         'model_checkpoint': 'models/v4',
+         'name': 'Transformer',
+         'no_sample': 0,
+         'top_p': 0.8},
+ 'name': 'ExternalPolicy'}
+- name = ExternalPolicy
+- net_spec = None
+- memory_spec = {'max_size': 1, 'name': 'Replay'}
+- body = body: {
+  "agent": "<convlab.agent.DialogAgent object at 0x7fd6f5d25f98>",
+  "env": "<convlab.env.multiwoz.MultiWozEnv object at 0x7fd73ebe30b8>",
+  "aeb": "(0, 0, 0)",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "explore_var": NaN,
+  "entropy_coef": NaN,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "ckpt_total_reward": NaN,
+  "total_reward": 0,
+  "total_reward_ma": NaN,
+  "ma_window": 100,
+  "best_reward_ma": -Infinity,
+  "eval_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(0,)",
+  "action_space": "Discrete(0)",
+  "observable_dim": {
+    "state": 0
+  },
+  "state_dim": 0,
+  "action_dim": 0,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Argmax",
+  "ActionPD": "<class 'convlab.lib.distribution.Argmax'>"
+}
+- action_pdtype = Argmax
+- action_policy = <function default at 0x7fd73e3b2b70>
+- policy = <convlab.modules.e2e.multiwoz.Transformer.Transformer.Transformer object at 0x7fd6f5d25eb8>
+[2019-11-21 19:33:44,990 PID:23786 INFO __init__.py __init__] DialogAgent:
+- spec = submission4
+- a = 0
+- agent_spec = {'algorithm': {'action_pdtype': 'Argmax',
+               'action_policy': 'default',
+               'e2e': {'max_history': 15,
+                       'model': 'gpt2_v4',
+                       'model_checkpoint': 'models/v4',
+                       'name': 'Transformer',
+                       'no_sample': 0,
+                       'top_p': 0.8},
+               'name': 'ExternalPolicy'},
+ 'memory': {'max_size': 1, 'name': 'Replay'},
+ 'name': 'DialogAgent'}
+- name = DialogAgent
+- nlu = None
+- dst = None
+- state_encoder = None
+- action_decoder = None
+- nlg = None
+- body = body: {
+  "agent": "<convlab.agent.DialogAgent object at 0x7fd6f5d25f98>",
+  "env": "<convlab.env.multiwoz.MultiWozEnv object at 0x7fd73ebe30b8>",
+  "aeb": "(0, 0, 0)",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "explore_var": NaN,
+  "entropy_coef": NaN,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "ckpt_total_reward": NaN,
+  "total_reward": 0,
+  "total_reward_ma": NaN,
+  "ma_window": 100,
+  "best_reward_ma": -Infinity,
+  "eval_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, avg_return, avg_len, avg_success, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(0,)",
+  "action_space": "Discrete(0)",
+  "observable_dim": {
+    "state": 0
+  },
+  "state_dim": 0,
+  "action_dim": 0,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Argmax",
+  "ActionPD": "<class 'convlab.lib.distribution.Argmax'>",
+  "memory": "<convlab.agent.memory.replay.Replay object at 0x7fd6f55edcf8>",
+  "state": null,
+  "encoded_state": null,
+  "action": null
+}
+- algorithm = <convlab.agent.algorithm.external.ExternalPolicy object at 0x7fd6f5d25f28>
+- warmup_epi = -1
+[2019-11-21 19:33:45,722 PID:23786 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2019-11-21 19:33:45,722 PID:23786 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmpbtv318zi
+[2019-11-21 19:33:45,847 PID:23786 INFO params.py pop] type = default
+[2019-11-21 19:33:45,847 PID:23786 INFO vocabulary.py from_files] Loading token dictionary from /tmp/tmpbtv318zi/vocabulary.
+[2019-11-21 19:33:45,858 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}, 'type': 'milu'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,858 PID:23786 INFO params.py pop] model.type = milu
+[2019-11-21 19:33:45,858 PID:23786 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.model.MILU'> from params {'attention': {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400}, 'attention_for_intent': False, 'attention_for_tag': False, 'context_for_intent': True, 'context_for_tag': False, 'dropout': 0.3, 'encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'}, 'include_start_end_transitions': False, 'intent_encoder': {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'}, 'label_encoding': 'BIO', 'regularizer': [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]], 'text_field_embedder': {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,858 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'token_characters': {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'}, 'tokens': {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,858 PID:23786 INFO params.py pop] model.text_field_embedder.type = basic
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.embedder_to_indexer_map = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.allow_unmatched_keys = False
+[2019-11-21 19:33:45,859 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding': {'embedding_dim': 16}, 'encoder': {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'}, 'type': 'character_encoding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = token_characters
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+[2019-11-21 19:33:45,859 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+[2019-11-21 19:33:45,860 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.seq2vec_encoder.Seq2VecEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128, 'type': 'cnn'} and extras {}
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+[2019-11-21 19:33:45,860 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2vec_encoders.cnn_encoder.CnnEncoder'> from params {'conv_layer_activation': 'relu', 'embedding_dim': 16, 'ngram_filter_sizes': [3], 'num_filters': 128} and extras {}
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 128
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [3]
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = relu
+[2019-11-21 19:33:45,860 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+[2019-11-21 19:33:45,861 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 50, 'trainable': True, 'type': 'embedding'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.type = embedding
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.projection_dim = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.trainable = True
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.padding_index = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.max_norm = None
+[2019-11-21 19:33:45,861 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+[2019-11-21 19:33:45,862 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+[2019-11-21 19:33:45,862 PID:23786 INFO params.py pop] model.text_field_embedder.token_embedders.tokens.sparse = False
+[2019-11-21 19:33:45,867 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 178, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py pop] model.encoder.type = lstm
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py pop] model.encoder.batch_first = True
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py pop] model.encoder.stateful = False
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.bidirectional = True
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.dropout = 0.5
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.hidden_size = 200
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.input_size = 178
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.num_layers = 1
+[2019-11-21 19:33:45,867 PID:23786 INFO params.py log_recursively] model.encoder.batch_first = True
+[2019-11-21 19:33:45,871 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py pop] model.intent_encoder.type = lstm
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py pop] model.intent_encoder.batch_first = True
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py pop] model.intent_encoder.stateful = False
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py as_dict] Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py as_dict] CURRENTLY DEFINED PARAMETERS: 
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py log_recursively] model.intent_encoder.bidirectional = True
+[2019-11-21 19:33:45,871 PID:23786 INFO params.py log_recursively] model.intent_encoder.dropout = 0.5
+[2019-11-21 19:33:45,872 PID:23786 INFO params.py log_recursively] model.intent_encoder.hidden_size = 200
+[2019-11-21 19:33:45,872 PID:23786 INFO params.py log_recursively] model.intent_encoder.input_size = 400
+[2019-11-21 19:33:45,872 PID:23786 INFO params.py log_recursively] model.intent_encoder.num_layers = 1
+[2019-11-21 19:33:45,872 PID:23786 INFO params.py log_recursively] model.intent_encoder.batch_first = True
+[2019-11-21 19:33:45,877 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'matrix_dim': 400, 'type': 'bilinear', 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,877 PID:23786 INFO params.py pop] model.attention.type = bilinear
+[2019-11-21 19:33:45,877 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {'matrix_dim': 400, 'vector_dim': 400} and extras {'vocab': Vocabulary with namespaces:  intent_labels, Size: 111 || labels, Size: 330 || tokens, Size: 18854 || token_characters, Size: 91 || Non Padded Namespaces: {'*labels', '*tags'}}
+[2019-11-21 19:33:45,877 PID:23786 INFO params.py pop] model.attention.vector_dim = 400
+[2019-11-21 19:33:45,877 PID:23786 INFO params.py pop] model.attention.matrix_dim = 400
+[2019-11-21 19:33:45,877 PID:23786 INFO params.py pop] model.attention.normalize = True
+[2019-11-21 19:33:45,878 PID:23786 INFO params.py pop] model.context_for_intent = True
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.context_for_tag = False
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.attention_for_intent = False
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.attention_for_tag = False
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.sequence_label_namespace = labels
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.intent_label_namespace = intent_labels
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.label_encoding = BIO
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.include_start_end_transitions = False
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.crf_decoding = False
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.constrain_crf_decoding = None
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.focal_loss_gamma = None
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.nongeneral_intent_weight = 5.0
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.num_train_examples = None
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.calculate_span_f1 = None
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.dropout = 0.3
+[2019-11-21 19:33:45,879 PID:23786 INFO params.py pop] model.verbose_metrics = False
+[2019-11-21 19:33:45,880 PID:23786 INFO params.py pop] model.regularizer = [['scalar_parameters', {'alpha': 0.1, 'type': 'l2'}]]
+[2019-11-21 19:33:45,881 PID:23786 INFO params.py pop] model.regularizer.list.list.type = l2
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__] Initializing parameters
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__] Done initializing parameters; the following parameters are using their default initialization from their code
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    attention._bias
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    attention._weight_matrix
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.bias_hh_l0
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.bias_hh_l0_reverse
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.bias_ih_l0
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.bias_ih_l0_reverse
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.weight_hh_l0
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.weight_hh_l0_reverse
+[2019-11-21 19:33:45,935 PID:23786 INFO initializers.py __call__]    encoder._module.weight_ih_l0
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    encoder._module.weight_ih_l0_reverse
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_hh_l0_reverse
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.bias_ih_l0_reverse
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_hh_l0_reverse
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_encoder._module.weight_ih_l0_reverse
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_projection_layer.bias
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    intent_projection_layer.weight
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    tag_projection_layer._module.bias
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    tag_projection_layer._module.weight
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+[2019-11-21 19:33:45,936 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+[2019-11-21 19:33:45,937 PID:23786 INFO initializers.py __call__]    text_field_embedder.token_embedder_tokens.weight
+[2019-11-21 19:33:45,942 PID:23786 INFO from_params.py from_params] instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}, 'type': 'milu'} and extras {}
+[2019-11-21 19:33:45,942 PID:23786 INFO params.py pop] dataset_reader.type = milu
+[2019-11-21 19:33:45,942 PID:23786 INFO from_params.py from_params] instantiating class <class 'convlab.modules.nlu.multiwoz.milu.dataset_reader.MILUDatasetReader'> from params {'context_size': 5, 'token_indexers': {'token_characters': {'min_padding_length': 3, 'type': 'characters'}, 'tokens': {'lowercase_tokens': True, 'type': 'single_id'}}} and extras {}
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.context_size = 5
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.agent = None
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.random_context_size = True
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_delimiter = None
+[2019-11-21 19:33:45,943 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'min_padding_length': 3, 'type': 'characters'} and extras {}
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.type = characters
+[2019-11-21 19:33:45,943 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_characters_indexer.TokenCharactersIndexer from params {'min_padding_length': 3} and extras {}
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.namespace = token_characters
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.start_tokens = None
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.end_tokens = None
+[2019-11-21 19:33:45,943 PID:23786 INFO params.py pop] dataset_reader.token_indexers.token_characters.min_padding_length = 3
+[2019-11-21 19:33:45,943 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'lowercase_tokens': True, 'type': 'single_id'} and extras {}
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.type = single_id
+[2019-11-21 19:33:45,944 PID:23786 INFO from_params.py from_params] instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'lowercase_tokens': True} and extras {}
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.namespace = tokens
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.lowercase_tokens = True
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.start_tokens = None
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.token_indexers.tokens.end_tokens = None
+[2019-11-21 19:33:45,944 PID:23786 INFO params.py pop] dataset_reader.lazy = False
+[2019-11-21 19:33:45,977 PID:23786 INFO multiwoz.py __init__] MultiWozEnv:
+- e = 0
+- done = False
+- env_spec = {'evaluator': {'name': 'MultiWozEvaluator'},
+ 'max_frame': 1000,
+ 'max_t': 40,
+ 'name': 'multiwoz',
+ 'nlg': {'is_user': True, 'name': 'MultiwozTemplateNLG'},
+ 'nlu': {'model_file': 'https://convlab.blob.core.windows.net/models/milu.tar.gz',
+         'name': 'MILU'},
+ 'sys_policy': {'name': 'RuleBasedMultiwozBot'},
+ 'user_policy': {'name': 'UserPolicyAgendaMultiWoz'}}
+- log_frequency = None
+- frame_op = None
+- frame_op_len = None
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- eval_frequency = 100
+- name = multiwoz
+- max_t = 40
+- max_frame = 1000
+- is_venv = False
+- clock_speed = 1
+- clock = <convlab.env.base.Clock object at 0x7fd6f5d77860>
+- to_render = False
+- action_dim = 0
+- observation_dim = 0
+- u_env = <convlab.env.multiwoz.MultiWozEnvironment object at 0x7fd6d8e08d68>
+- evaluator = <convlab.evaluator.multiwoz.MultiWozEvaluator object at 0x7fd6d8183940>
+- observation_space = Box(0,)
+- action_space = Discrete(0)
+- observable_dim = {'state': 0}
+- is_discrete = True
+[2019-11-21 19:33:45,977 PID:23786 INFO logger.py info] Session:
+- spec = submission4
+- index = 0
+- agent = <convlab.agent.DialogAgent object at 0x7fd6f5d25f98>
+- env = <convlab.env.multiwoz.MultiWozEnv object at 0x7fd73ebe30b8>
+- eval_env = <convlab.env.multiwoz.MultiWozEnv object at 0x7fd6f5d771d0>
+- num_eval = 100
+- warmup_epi = -1
+[2019-11-21 19:33:46,040 PID:23786 ACT logger.py act] User action: {'Train-Inform': [['Day', 'thursday']]}
+[2019-11-21 19:33:46,040 PID:23786 ACT logger.py act] Goal: {'train': {'info': {'destination': 'cambridge', 'day': 'thursday', 'arriveBy': '17:15', 'departure': 'cambridge'}, 'reqt': {'leaveAt': '?', 'price': '?'}, 'book': {'people': '5'}, 'booked': '?'}, 'restaurant': {'info': {'pricerange': 'cheap'}, 'reqt': {'address': '?'}}}
+[2019-11-21 19:33:46,041 PID:23786 NL logger.py nl] User utterance: I need to travel on thursday .
+[2019-11-21 19:33:46,041 PID:23786 ACT logger.py act] Inferred user action: I need to travel on thursday .
+[2019-11-21 19:33:46,041 PID:23786 STATE logger.py state] Dialog state: I need to travel on thursday .
+[2019-11-21 19:33:46,738 PID:23786 ACT logger.py act] System action: Where will you be departing from and where are you going?
+[2019-11-21 19:33:46,738 PID:23786 NL logger.py nl] System utterance: Where will you be departing from and where are you going?
+[2019-11-21 19:33:46,753 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Depart', '?'], ['Dest', '?']]}
+[2019-11-21 19:33:46,753 PID:23786 NL logger.py nl] User utterance: Yes I would like to go to cambridge please . Great I also need a train departs from cambridge .
+[2019-11-21 19:33:46,753 PID:23786 ACT logger.py act] Inferred user action: Yes I would like to go to cambridge please . Great I also need a train departs from cambridge .
+[2019-11-21 19:33:46,753 PID:23786 STATE logger.py state] Dialog state: Yes I would like to go to cambridge please . Great I also need a train departs from cambridge .
+[2019-11-21 19:33:47,306 PID:23786 ACT logger.py act] System action: Where will you be departing from?
+[2019-11-21 19:33:47,306 PID:23786 NL logger.py nl] System utterance: Where will you be departing from?
+[2019-11-21 19:33:47,323 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Depart', '?']]}
+[2019-11-21 19:33:47,323 PID:23786 NL logger.py nl] User utterance: I ' m departing from cambridge .
+[2019-11-21 19:33:47,323 PID:23786 ACT logger.py act] Inferred user action: I ' m departing from cambridge .
+[2019-11-21 19:33:47,323 PID:23786 STATE logger.py state] Dialog state: I ' m departing from cambridge .
+[2019-11-21 19:33:47,948 PID:23786 ACT logger.py act] System action: Where will you be departing from?
+[2019-11-21 19:33:47,948 PID:23786 NL logger.py nl] System utterance: Where will you be departing from?
+[2019-11-21 19:33:47,962 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Depart', '?']]}
+[2019-11-21 19:33:47,962 PID:23786 NL logger.py nl] User utterance: I will departing from cambridge .
+[2019-11-21 19:33:47,962 PID:23786 ACT logger.py act] Inferred user action: I will departing from cambridge .
+[2019-11-21 19:33:47,962 PID:23786 STATE logger.py state] Dialog state: I will departing from cambridge .
+[2019-11-21 19:33:48,601 PID:23786 ACT logger.py act] System action: And what time would you like to leave?
+[2019-11-21 19:33:48,601 PID:23786 NL logger.py nl] System utterance: And what time would you like to leave?
+[2019-11-21 19:33:48,614 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Leave', '?']]}
+[2019-11-21 19:33:48,614 PID:23786 NL logger.py nl] User utterance: I need it to arrive by 17:15 .
+[2019-11-21 19:33:48,614 PID:23786 ACT logger.py act] Inferred user action: I need it to arrive by 17:15 .
+[2019-11-21 19:33:48,614 PID:23786 STATE logger.py state] Dialog state: I need it to arrive by 17:15 .
+[2019-11-21 19:33:49,509 PID:23786 ACT logger.py act] System action: TR4526 arrives by 17:09, would you like me to book it?
+[2019-11-21 19:33:49,509 PID:23786 NL logger.py nl] System utterance: TR4526 arrives by 17:09, would you like me to book it?
+[2019-11-21 19:33:49,525 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Arrive', '17:09'], ['Id', 'TR4526']], 'Train-OfferBook': [['none', 'none']]}
+[2019-11-21 19:33:49,525 PID:23786 NL logger.py nl] User utterance: Can you tell me the price ? What time does the train leave ?
+[2019-11-21 19:33:49,525 PID:23786 ACT logger.py act] Inferred user action: Can you tell me the price ? What time does the train leave ?
+[2019-11-21 19:33:49,525 PID:23786 STATE logger.py state] Dialog state: Can you tell me the price ? What time does the train leave ?
+[2019-11-21 19:33:50,264 PID:23786 ACT logger.py act] System action: The train leaves at 17.90 pounds.
+[2019-11-21 19:33:50,264 PID:23786 NL logger.py nl] System utterance: The train leaves at 17.90 pounds.
+[2019-11-21 19:33:50,278 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Ticket', '17.90 pounds']]}
+[2019-11-21 19:33:50,279 PID:23786 NL logger.py nl] User utterance: Could you comfirm the departure time of that train ?
+[2019-11-21 19:33:50,279 PID:23786 ACT logger.py act] Inferred user action: Could you comfirm the departure time of that train ?
+[2019-11-21 19:33:50,279 PID:23786 STATE logger.py state] Dialog state: Could you comfirm the departure time of that train ?
+[2019-11-21 19:33:51,011 PID:23786 ACT logger.py act] System action: It leaves at 16:19
+[2019-11-21 19:33:51,011 PID:23786 NL logger.py nl] System utterance: It leaves at 16:19
+[2019-11-21 19:33:51,024 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Leave', '16:19']]}
+[2019-11-21 19:33:51,024 PID:23786 NL logger.py nl] User utterance: I would like 5 tickets please .
+[2019-11-21 19:33:51,024 PID:23786 ACT logger.py act] Inferred user action: I would like 5 tickets please .
+[2019-11-21 19:33:51,024 PID:23786 STATE logger.py state] Dialog state: I would like 5 tickets please .
+[2019-11-21 19:33:51,848 PID:23786 ACT logger.py act] System action: Booking was successful. Reference number is : 00001214 .
+[2019-11-21 19:33:51,848 PID:23786 NL logger.py nl] System utterance: Booking was successful. Reference number is : 00001214 .
+[2019-11-21 19:33:51,861 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00001214']]}
+[2019-11-21 19:33:51,862 PID:23786 NL logger.py nl] User utterance: That 's all I need right now . Thanks , you have been very helpful !.
+[2019-11-21 19:33:51,862 PID:23786 ACT logger.py act] Inferred user action: That 's all I need right now . Thanks , you have been very helpful !.
+[2019-11-21 19:33:51,862 PID:23786 STATE logger.py state] Dialog state: That 's all I need right now . Thanks , you have been very helpful !.
+[2019-11-21 19:33:52,888 PID:23786 ACT logger.py act] System action: Thank you for using Cambridge TownInfo centre.  Have a great day!
+[2019-11-21 19:33:52,888 PID:23786 NL logger.py nl] System utterance: Thank you for using Cambridge TownInfo centre.  Have a great day!
+[2019-11-21 19:33:52,904 PID:23786 ACT logger.py act] Inferred system action: {'general-bye': [['none', 'none']]}
+[2019-11-21 19:33:52,904 PID:23786 NL logger.py nl] User utterance: Actually I need a cheaply priced restaurant . Are there any fitting that description ?
+[2019-11-21 19:33:52,905 PID:23786 ACT logger.py act] Inferred user action: Actually I need a cheaply priced restaurant . Are there any fitting that description ?
+[2019-11-21 19:33:52,905 PID:23786 STATE logger.py state] Dialog state: Actually I need a cheaply priced restaurant . Are there any fitting that description ?
+[2019-11-21 19:33:53,517 PID:23786 ACT logger.py act] System action: Sure, what kind of food are you interested in?
+[2019-11-21 19:33:53,517 PID:23786 NL logger.py nl] System utterance: Sure, what kind of food are you interested in?
+[2019-11-21 19:33:53,535 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Request': [['Food', '?']]}
+[2019-11-21 19:33:53,535 PID:23786 NL logger.py nl] User utterance: Yes . This restaurant should serve don't care food too .
+[2019-11-21 19:33:53,535 PID:23786 ACT logger.py act] Inferred user action: Yes . This restaurant should serve don't care food too .
+[2019-11-21 19:33:53,535 PID:23786 STATE logger.py state] Dialog state: Yes . This restaurant should serve don't care food too .
+[2019-11-21 19:33:54,116 PID:23786 ACT logger.py act] System action: What area of town?
+[2019-11-21 19:33:54,116 PID:23786 NL logger.py nl] System utterance: What area of town?
+[2019-11-21 19:33:54,130 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Request': [['Area', '?']]}
+[2019-11-21 19:33:54,131 PID:23786 NL logger.py nl] User utterance: Is that located in the don't care ?
+[2019-11-21 19:33:54,131 PID:23786 ACT logger.py act] Inferred user action: Is that located in the don't care ?
+[2019-11-21 19:33:54,131 PID:23786 STATE logger.py state] Dialog state: Is that located in the don't care ?
+[2019-11-21 19:33:54,867 PID:23786 ACT logger.py act] System action: Yes, pizza hut city centre is in the centre.
+[2019-11-21 19:33:54,868 PID:23786 NL logger.py nl] System utterance: Yes, pizza hut city centre is in the centre.
+[2019-11-21 19:33:54,882 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Area', 'centre'], ['Name', 'pizza hut city centre']]}
+[2019-11-21 19:33:54,883 PID:23786 NL logger.py nl] User utterance: May I have the address ?
+[2019-11-21 19:33:54,883 PID:23786 ACT logger.py act] Inferred user action: May I have the address ?
+[2019-11-21 19:33:54,883 PID:23786 STATE logger.py state] Dialog state: May I have the address ?
+[2019-11-21 19:33:55,868 PID:23786 ACT logger.py act] System action: Unfortunately, we don't have any listings for Cantrell restaurants.
+[2019-11-21 19:33:55,868 PID:23786 NL logger.py nl] System utterance: Unfortunately, we don't have any listings for Cantrell restaurants.
+[2019-11-21 19:33:55,883 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-NoOffer': [['Food', 'Cantrell']]}
+[2019-11-21 19:33:55,883 PID:23786 NL logger.py nl] User utterance: Thank you , goodbye.
+[2019-11-21 19:33:55,883 PID:23786 ACT logger.py act] Inferred user action: Thank you , goodbye.
+[2019-11-21 19:33:55,883 PID:23786 STATE logger.py state] Dialog state: Thank you , goodbye.
+[2019-11-21 19:33:55,883 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:33:55,896 PID:23786 ACT logger.py act] User action: {'Hotel-Inform': [['Stars', '4']]}
+[2019-11-21 19:33:55,896 PID:23786 ACT logger.py act] Goal: {'hotel': {'info': {'type': 'guesthouse', 'area': 'centre', 'stars': '4'}, 'reqt': {'parking': '?'}}, 'train': {'info': {'destination': 'cambridge', 'day': 'monday', 'arriveBy': '20:00', 'departure': 'peterborough'}, 'reqt': {'trainID': '?'}}}
+[2019-11-21 19:33:55,897 PID:23786 NL logger.py nl] User utterance: Are there any 4 stars available ?
+[2019-11-21 19:33:55,897 PID:23786 ACT logger.py act] Inferred user action: Are there any 4 stars available ?
+[2019-11-21 19:33:55,897 PID:23786 STATE logger.py state] Dialog state: Are there any 4 stars available ?
+[2019-11-21 19:33:56,492 PID:23786 ACT logger.py act] System action: Yes, there are several options. Do you have a preferred area?
+[2019-11-21 19:33:56,492 PID:23786 NL logger.py nl] System utterance: Yes, there are several options. Do you have a preferred area?
+[2019-11-21 19:33:56,504 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'several']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:33:56,505 PID:23786 NL logger.py nl] User utterance: I ' m looking for a hotel in the centre .
+[2019-11-21 19:33:56,505 PID:23786 ACT logger.py act] Inferred user action: I ' m looking for a hotel in the centre .
+[2019-11-21 19:33:56,505 PID:23786 STATE logger.py state] Dialog state: I ' m looking for a hotel in the centre .
+[2019-11-21 19:33:57,171 PID:23786 ACT logger.py act] System action: There are 2 hotels that match your request. Do you have a price range in mind?
+[2019-11-21 19:33:57,171 PID:23786 NL logger.py nl] System utterance: There are 2 hotels that match your request. Do you have a price range in mind?
+[2019-11-21 19:33:57,190 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', '2'], ['Type', 'hotels']], 'Hotel-Request': [['Price', '?']]}
+[2019-11-21 19:33:57,190 PID:23786 NL logger.py nl] User utterance: Do you have one that is a guesthouse ?
+[2019-11-21 19:33:57,191 PID:23786 ACT logger.py act] Inferred user action: Do you have one that is a guesthouse ?
+[2019-11-21 19:33:57,191 PID:23786 STATE logger.py state] Dialog state: Do you have one that is a guesthouse ?
+[2019-11-21 19:33:57,937 PID:23786 ACT logger.py act] System action: alexander bed and breakfast meets your criteria.  Would you like me to book it for you?
+[2019-11-21 19:33:57,937 PID:23786 NL logger.py nl] System utterance: alexander bed and breakfast meets your criteria.  Would you like me to book it for you?
+[2019-11-21 19:33:57,957 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Name', 'alexander bed and breakfast']], 'Booking-Inform': [['none', 'none']]}
+[2019-11-21 19:33:57,957 PID:23786 NL logger.py nl] User utterance: Does that have free parking ?
+[2019-11-21 19:33:57,957 PID:23786 ACT logger.py act] Inferred user action: Does that have free parking ?
+[2019-11-21 19:33:57,957 PID:23786 STATE logger.py state] Dialog state: Does that have free parking ?
+[2019-11-21 19:33:58,439 PID:23786 ACT logger.py act] System action: Yes, it does.
+[2019-11-21 19:33:58,439 PID:23786 NL logger.py nl] System utterance: Yes, it does.
+[2019-11-21 19:33:58,452 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Parking', 'none']]}
+[2019-11-21 19:33:58,452 PID:23786 NL logger.py nl] User utterance: I ' m also looking for a train from peterborough . I 'd like to arrive by 20:00 . I will leav on monday . I need to find a train to cambridge please .
+[2019-11-21 19:33:58,452 PID:23786 ACT logger.py act] Inferred user action: I ' m also looking for a train from peterborough . I 'd like to arrive by 20:00 . I will leav on monday . I need to find a train to cambridge please .
+[2019-11-21 19:33:58,452 PID:23786 STATE logger.py state] Dialog state: I ' m also looking for a train from peterborough . I 'd like to arrive by 20:00 . I will leav on monday . I need to find a train to cambridge please .
+[2019-11-21 19:33:59,444 PID:23786 ACT logger.py act] System action: Train TR8868 arrives by 19:58. Would you like to book it?
+[2019-11-21 19:33:59,444 PID:23786 NL logger.py nl] System utterance: Train TR8868 arrives by 19:58. Would you like to book it?
+[2019-11-21 19:33:59,466 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Arrive', '19:58'], ['Id', 'TR8868']], 'Train-OfferBook': [['none', 'none']]}
+[2019-11-21 19:33:59,466 PID:23786 NL logger.py nl] User utterance: I am all set . Have a nice day . Bye .
+[2019-11-21 19:33:59,466 PID:23786 ACT logger.py act] Inferred user action: I am all set . Have a nice day . Bye .
+[2019-11-21 19:33:59,466 PID:23786 STATE logger.py state] Dialog state: I am all set . Have a nice day . Bye .
+[2019-11-21 19:33:59,466 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:33:59,471 PID:23786 ACT logger.py act] User action: {'Attraction-Inform': [['Type', 'college']]}
+[2019-11-21 19:33:59,471 PID:23786 ACT logger.py act] Goal: {'attraction': {'info': {'type': 'college'}, 'reqt': {'address': '?', 'area': '?'}}}
+[2019-11-21 19:33:59,471 PID:23786 NL logger.py nl] User utterance: I ' m looking for a college type attraction .
+[2019-11-21 19:33:59,471 PID:23786 ACT logger.py act] Inferred user action: I ' m looking for a college type attraction .
+[2019-11-21 19:33:59,471 PID:23786 STATE logger.py state] Dialog state: I ' m looking for a college type attraction .
+[2019-11-21 19:34:00,015 PID:23786 ACT logger.py act] System action: There are 18 college types in Cambridge. What part of town would you like to visit a college?
+[2019-11-21 19:34:00,015 PID:23786 NL logger.py nl] System utterance: There are 18 college types in Cambridge. What part of town would you like to visit a college?
+[2019-11-21 19:34:00,032 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Choice', '18'], ['Type', 'college']], 'Attraction-Request': [['Area', '?']]}
+[2019-11-21 19:34:00,032 PID:23786 NL logger.py nl] User utterance: Can you tell me what area it is located in ? Could I get the address for it ?
+[2019-11-21 19:34:00,032 PID:23786 ACT logger.py act] Inferred user action: Can you tell me what area it is located in ? Could I get the address for it ?
+[2019-11-21 19:34:00,032 PID:23786 STATE logger.py state] Dialog state: Can you tell me what area it is located in ? Could I get the address for it ?
+[2019-11-21 19:34:00,443 PID:23786 ACT logger.py act] System action: christ's college is in the centre area, at saint andrew's street .
+[2019-11-21 19:34:00,443 PID:23786 NL logger.py nl] System utterance: christ's college is in the centre area, at saint andrew's street .
+[2019-11-21 19:34:00,464 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Area', 'centre'], ['Name', "christ 's college"], ['Addr', "saint andrew 's street"]]}
+[2019-11-21 19:34:00,464 PID:23786 NL logger.py nl] User utterance: Thank you , goodbye.
+[2019-11-21 19:34:00,464 PID:23786 ACT logger.py act] Inferred user action: Thank you , goodbye.
+[2019-11-21 19:34:00,464 PID:23786 STATE logger.py state] Dialog state: Thank you , goodbye.
+[2019-11-21 19:34:00,464 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:34:00,478 PID:23786 ACT logger.py act] User action: {'Restaurant-Inform': [['Area', 'centre'], ['Price', 'expensive']]}
+[2019-11-21 19:34:00,478 PID:23786 ACT logger.py act] Goal: {'restaurant': {'info': {'pricerange': 'expensive', 'area': 'centre'}, 'reqt': {'phone': '?'}}, 'train': {'info': {'destination': 'cambridge', 'day': 'tuesday', 'departure': 'stansted airport', 'leaveAt': '13:15'}, 'reqt': {'trainID': '?'}}}
+[2019-11-21 19:34:00,478 PID:23786 NL logger.py nl] User utterance: I ' m so hungry - can you find me a place to eat in the city centre ? I want to find a expensive priced restaurant .
+[2019-11-21 19:34:00,478 PID:23786 ACT logger.py act] Inferred user action: I ' m so hungry - can you find me a place to eat in the city centre ? I want to find a expensive priced restaurant .
+[2019-11-21 19:34:00,478 PID:23786 STATE logger.py state] Dialog state: I ' m so hungry - can you find me a place to eat in the city centre ? I want to find a expensive priced restaurant .
+[2019-11-21 19:34:01,000 PID:23786 ACT logger.py act] System action: We have 33 such restaurants. Do you have a specific food type in mind?
+[2019-11-21 19:34:01,000 PID:23786 NL logger.py nl] System utterance: We have 33 such restaurants. Do you have a specific food type in mind?
+[2019-11-21 19:34:01,017 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Choice', '33']], 'Restaurant-Request': [['Food', '?']]}
+[2019-11-21 19:34:01,017 PID:23786 NL logger.py nl] User utterance: May I have their telephone number please ?
+[2019-11-21 19:34:01,017 PID:23786 ACT logger.py act] Inferred user action: May I have their telephone number please ?
+[2019-11-21 19:34:01,017 PID:23786 STATE logger.py state] Dialog state: May I have their telephone number please ?
+[2019-11-21 19:34:01,405 PID:23786 ACT logger.py act] System action: curry garden phone number is 01223302330 .
+[2019-11-21 19:34:01,406 PID:23786 NL logger.py nl] System utterance: curry garden phone number is 01223302330 .
+[2019-11-21 19:34:01,423 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Phone', '01223302330'], ['Name', 'curry garden']]}
+[2019-11-21 19:34:01,423 PID:23786 NL logger.py nl] User utterance: I ' m departing from stansted airport . I ' m looking to travel on tuesday. I am leaving for cambridge. I would like to leave anytime after 13:15 .
+[2019-11-21 19:34:01,423 PID:23786 ACT logger.py act] Inferred user action: I ' m departing from stansted airport . I ' m looking to travel on tuesday. I am leaving for cambridge. I would like to leave anytime after 13:15 .
+[2019-11-21 19:34:01,423 PID:23786 STATE logger.py state] Dialog state: I ' m departing from stansted airport . I ' m looking to travel on tuesday. I am leaving for cambridge. I would like to leave anytime after 13:15 .
+[2019-11-21 19:34:02,333 PID:23786 ACT logger.py act] System action: I have several options for you.  Do you have a preference on departure time?
+[2019-11-21 19:34:02,334 PID:23786 NL logger.py nl] System utterance: I have several options for you.  Do you have a preference on departure time?
+[2019-11-21 19:34:02,354 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Choice', 'several']], 'Train-Request': [['Leave', '?']]}
+[2019-11-21 19:34:02,354 PID:23786 NL logger.py nl] User utterance: Yes I ' m leaving on Saturday and not too early , sometime after 13:15 .
+[2019-11-21 19:34:02,354 PID:23786 ACT logger.py act] Inferred user action: Yes I ' m leaving on Saturday and not too early , sometime after 13:15 .
+[2019-11-21 19:34:02,354 PID:23786 STATE logger.py state] Dialog state: Yes I ' m leaving on Saturday and not too early , sometime after 13:15 .
+[2019-11-21 19:34:03,433 PID:23786 ACT logger.py act] System action: TR8724 leaves at 13:16. Would you like me to book it for you?
+[2019-11-21 19:34:03,433 PID:23786 NL logger.py nl] System utterance: TR8724 leaves at 13:16. Would you like me to book it for you?
+[2019-11-21 19:34:03,457 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Id', 'TR8724'], ['Leave', '13:16']], 'Train-OfferBook': [['none', 'none']]}
+[2019-11-21 19:34:03,457 PID:23786 NL logger.py nl] User utterance: Ok , have a good day . Goodbye .
+[2019-11-21 19:34:03,457 PID:23786 ACT logger.py act] Inferred user action: Ok , have a good day . Goodbye .
+[2019-11-21 19:34:03,457 PID:23786 STATE logger.py state] Dialog state: Ok , have a good day . Goodbye .
+[2019-11-21 19:34:03,458 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:34:03,462 PID:23786 ACT logger.py act] User action: {'Restaurant-Inform': [['Food', 'italian'], ['Price', 'cheap']]}
+[2019-11-21 19:34:03,462 PID:23786 ACT logger.py act] Goal: {'restaurant': {'info': {'food': 'italian', 'pricerange': 'cheap'}, 'reqt': {'phone': '?'}}}
+[2019-11-21 19:34:03,463 PID:23786 NL logger.py nl] User utterance: How about a italian restaurant ? I am looking for a cheap restaurant .
+[2019-11-21 19:34:03,463 PID:23786 ACT logger.py act] Inferred user action: How about a italian restaurant ? I am looking for a cheap restaurant .
+[2019-11-21 19:34:03,463 PID:23786 STATE logger.py state] Dialog state: How about a italian restaurant ? I am looking for a cheap restaurant .
+[2019-11-21 19:34:03,980 PID:23786 ACT logger.py act] System action: There are several options. What area would you like to dine in?
+[2019-11-21 19:34:03,980 PID:23786 NL logger.py nl] System utterance: There are several options. What area would you like to dine in?
+[2019-11-21 19:34:03,995 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Choice', 'several']], 'Restaurant-Request': [['Area', '?']]}
+[2019-11-21 19:34:03,996 PID:23786 NL logger.py nl] User utterance: I 'd like to be in the don't care please .
+[2019-11-21 19:34:03,996 PID:23786 ACT logger.py act] Inferred user action: I 'd like to be in the don't care please .
+[2019-11-21 19:34:03,996 PID:23786 STATE logger.py state] Dialog state: I 'd like to be in the don't care please .
+[2019-11-21 19:34:04,489 PID:23786 ACT logger.py act] System action: pizza hut city centre is a nice place, shall I book it for you?
+[2019-11-21 19:34:04,489 PID:23786 NL logger.py nl] System utterance: pizza hut city centre is a nice place, shall I book it for you?
+[2019-11-21 19:34:04,508 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Recommend': [['Name', 'pizza hut city centre']], 'Booking-Inform': [['none', 'none']]}
+[2019-11-21 19:34:04,508 PID:23786 NL logger.py nl] User utterance: I would like their phone number .
+[2019-11-21 19:34:04,509 PID:23786 ACT logger.py act] Inferred user action: I would like their phone number .
+[2019-11-21 19:34:04,509 PID:23786 STATE logger.py state] Dialog state: I would like their phone number .
+[2019-11-21 19:34:04,866 PID:23786 ACT logger.py act] System action: Their phone number is 01223323737 .
+[2019-11-21 19:34:04,866 PID:23786 NL logger.py nl] System utterance: Their phone number is 01223323737 .
+[2019-11-21 19:34:04,879 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Phone', '01223323737']]}
+[2019-11-21 19:34:04,879 PID:23786 NL logger.py nl] User utterance: That 's all I need today . Thanks ! Bye !.
+[2019-11-21 19:34:04,880 PID:23786 ACT logger.py act] Inferred user action: That 's all I need today . Thanks ! Bye !.
+[2019-11-21 19:34:04,880 PID:23786 STATE logger.py state] Dialog state: That 's all I need today . Thanks ! Bye !.
+[2019-11-21 19:34:04,880 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:34:04,885 PID:23786 ACT logger.py act] User action: {'Hotel-Inform': [['Stars', '4']]}
+[2019-11-21 19:34:04,885 PID:23786 ACT logger.py act] Goal: {'attraction': {'info': {'area': 'centre'}, 'reqt': {'postcode': '?', 'phone': '?'}}, 'hotel': {'info': {'area': 'centre', 'stars': '4'}, 'book': {'stay': '4', 'people': '1', 'day': 'sunday'}, 'booked': '?'}}
+[2019-11-21 19:34:04,885 PID:23786 NL logger.py nl] User utterance: I want a place with a 4 star rating.
+[2019-11-21 19:34:04,885 PID:23786 ACT logger.py act] Inferred user action: I want a place with a 4 star rating.
+[2019-11-21 19:34:04,885 PID:23786 STATE logger.py state] Dialog state: I want a place with a 4 star rating.
+[2019-11-21 19:34:05,512 PID:23786 ACT logger.py act] System action: There are several places, can I get an area you 'd like to stay in?
+[2019-11-21 19:34:05,512 PID:23786 NL logger.py nl] System utterance: There are several places, can I get an area you 'd like to stay in?
+[2019-11-21 19:34:05,527 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'several']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:34:05,527 PID:23786 NL logger.py nl] User utterance: I need a place to stay in the centre please .
+[2019-11-21 19:34:05,527 PID:23786 ACT logger.py act] Inferred user action: I need a place to stay in the centre please .
+[2019-11-21 19:34:05,527 PID:23786 STATE logger.py state] Dialog state: I need a place to stay in the centre please .
+[2019-11-21 19:34:06,135 PID:23786 ACT logger.py act] System action: I have 2 places. Do you have a price range in mind?
+[2019-11-21 19:34:06,136 PID:23786 NL logger.py nl] System utterance: I have 2 places. Do you have a price range in mind?
+[2019-11-21 19:34:06,154 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', '2']], 'Hotel-Request': [['Price', '?']]}
+[2019-11-21 19:34:06,154 PID:23786 NL logger.py nl] User utterance: I also need a place to go in the centre .
+[2019-11-21 19:34:06,154 PID:23786 ACT logger.py act] Inferred user action: I also need a place to go in the centre .
+[2019-11-21 19:34:06,154 PID:23786 STATE logger.py state] Dialog state: I also need a place to go in the centre .
+[2019-11-21 19:34:06,645 PID:23786 ACT logger.py act] System action: There are 44 attractions in the centre. Is there a certain type you would like?
+[2019-11-21 19:34:06,645 PID:23786 NL logger.py nl] System utterance: There are 44 attractions in the centre. Is there a certain type you would like?
+[2019-11-21 19:34:06,664 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Area', 'centre'], ['Choice', '44']], 'Attraction-Request': [['Type', '?']]}
+[2019-11-21 19:34:06,664 PID:23786 NL logger.py nl] User utterance: I was hoping to see local places while in cambridge . Some don't care would be great .
+[2019-11-21 19:34:06,664 PID:23786 ACT logger.py act] Inferred user action: I was hoping to see local places while in cambridge . Some don't care would be great .
+[2019-11-21 19:34:06,664 PID:23786 STATE logger.py state] Dialog state: I was hoping to see local places while in cambridge . Some don't care would be great .
+[2019-11-21 19:34:06,929 PID:23786 ACT logger.py act] System action: I recommend adc theatre .
+[2019-11-21 19:34:06,929 PID:23786 NL logger.py nl] System utterance: I recommend adc theatre .
+[2019-11-21 19:34:06,957 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Recommend': [['Name', 'adc theatre']]}
+[2019-11-21 19:34:06,957 PID:23786 NL logger.py nl] User utterance: Can you give me their phone number please ? I 'll need the postcode .
+[2019-11-21 19:34:06,957 PID:23786 ACT logger.py act] Inferred user action: Can you give me their phone number please ? I 'll need the postcode .
+[2019-11-21 19:34:06,957 PID:23786 STATE logger.py state] Dialog state: Can you give me their phone number please ? I 'll need the postcode .
+[2019-11-21 19:34:07,619 PID:23786 ACT logger.py act] System action: The phone number is 01223300085 . The postcode is cb58as . Is there anything else I can help you with?
+[2019-11-21 19:34:07,619 PID:23786 NL logger.py nl] System utterance: The phone number is 01223300085 . The postcode is cb58as . Is there anything else I can help you with?
+[2019-11-21 19:34:07,641 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Post', 'cb58as'], ['Phone', '01223300085']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:07,641 PID:23786 NL logger.py nl] User utterance: Sunday please . There will be 1 people . How about only 4 nights .
+[2019-11-21 19:34:07,641 PID:23786 ACT logger.py act] Inferred user action: Sunday please . There will be 1 people . How about only 4 nights .
+[2019-11-21 19:34:07,641 PID:23786 STATE logger.py state] Dialog state: Sunday please . There will be 1 people . How about only 4 nights .
+[2019-11-21 19:34:08,284 PID:23786 ACT logger.py act] System action: Booking was successful. Reference number is : [hotel_reference] . Is there anything else I can help you with?
+[2019-11-21 19:34:08,284 PID:23786 NL logger.py nl] System utterance: Booking was successful. Reference number is : [hotel_reference] . Is there anything else I can help you with?
+[2019-11-21 19:34:08,308 PID:23786 ACT logger.py act] Inferred system action: {'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:08,308 PID:23786 NL logger.py nl] User utterance: I want to check in on sunday. There are 1 of us . How about 4 night ? Would that work ?
+[2019-11-21 19:34:08,308 PID:23786 ACT logger.py act] Inferred user action: I want to check in on sunday. There are 1 of us . How about 4 night ? Would that work ?
+[2019-11-21 19:34:08,308 PID:23786 STATE logger.py state] Dialog state: I want to check in on sunday. There are 1 of us . How about 4 night ? Would that work ?
+[2019-11-21 19:34:09,052 PID:23786 ACT logger.py act] System action: The booking was successful. Your reference number is [hotel_reference] . Is there anything else I can help you with?
+[2019-11-21 19:34:09,052 PID:23786 NL logger.py nl] System utterance: The booking was successful. Your reference number is [hotel_reference] . Is there anything else I can help you with?
+[2019-11-21 19:34:09,081 PID:23786 ACT logger.py act] Inferred system action: {'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:09,081 PID:23786 NL logger.py nl] User utterance: Great , can you book that for first day sunday please ? Yes , could you book the hotel room for me for 1 people ? I would like to book it for 4 nights please .
+[2019-11-21 19:34:09,081 PID:23786 ACT logger.py act] Inferred user action: Great , can you book that for first day sunday please ? Yes , could you book the hotel room for me for 1 people ? I would like to book it for 4 nights please .
+[2019-11-21 19:34:09,081 PID:23786 STATE logger.py state] Dialog state: Great , can you book that for first day sunday please ? Yes , could you book the hotel room for me for 1 people ? I would like to book it for 4 nights please .
+[2019-11-21 19:34:10,109 PID:23786 ACT logger.py act] System action: I have that booked for you. Your reference number is [hotel_reference] . Is there anything else I can do for you today?
+[2019-11-21 19:34:10,109 PID:23786 NL logger.py nl] System utterance: I have that booked for you. Your reference number is [hotel_reference] . Is there anything else I can do for you today?
+[2019-11-21 19:34:10,141 PID:23786 ACT logger.py act] Inferred system action: {'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:10,141 PID:23786 NL logger.py nl] User utterance: I want to check in on sunday. Yes , could you book the hotel room for me for 1 people ? What about 4 nights ?
+[2019-11-21 19:34:10,141 PID:23786 ACT logger.py act] Inferred user action: I want to check in on sunday. Yes , could you book the hotel room for me for 1 people ? What about 4 nights ?
+[2019-11-21 19:34:10,141 PID:23786 STATE logger.py state] Dialog state: I want to check in on sunday. Yes , could you book the hotel room for me for 1 people ? What about 4 nights ?
+[2019-11-21 19:34:11,742 PID:23786 ACT logger.py act] System action: Booking was successful. Your reference number is 00000002 . Is there anything else I can help you with today?
+[2019-11-21 19:34:11,742 PID:23786 NL logger.py nl] System utterance: Booking was successful. Your reference number is 00000002 . Is there anything else I can help you with today?
+[2019-11-21 19:34:11,773 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:11,773 PID:23786 NL logger.py nl] User utterance: Sunday please . There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:11,773 PID:23786 ACT logger.py act] Inferred user action: Sunday please . There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:11,773 PID:23786 STATE logger.py state] Dialog state: Sunday please . There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:13,704 PID:23786 ACT logger.py act] System action: Sure. Your booking was successful. Your reference number is 00000002 . Can I help you with anything else?
+[2019-11-21 19:34:13,704 PID:23786 NL logger.py nl] System utterance: Sure. Your booking was successful. Your reference number is 00000002 . Can I help you with anything else?
+[2019-11-21 19:34:13,731 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:13,731 PID:23786 NL logger.py nl] User utterance: On sunday please. There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:13,732 PID:23786 ACT logger.py act] Inferred user action: On sunday please. There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:13,732 PID:23786 STATE logger.py state] Dialog state: On sunday please. There will be 1 of us . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:15,547 PID:23786 ACT logger.py act] System action: Sure thing. For what day and how many nights?
+[2019-11-21 19:34:15,547 PID:23786 NL logger.py nl] System utterance: Sure thing. For what day and how many nights?
+[2019-11-21 19:34:15,568 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Request': [['Day', '?'], ['Stay', '?']]}
+[2019-11-21 19:34:15,569 PID:23786 NL logger.py nl] User utterance: I want to check in on sunday. That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:15,569 PID:23786 ACT logger.py act] Inferred user action: I want to check in on sunday. That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:15,569 PID:23786 STATE logger.py state] Dialog state: I want to check in on sunday. That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:17,978 PID:23786 ACT logger.py act] System action: I have made that reservation and your reference number is 00000002 . Is there anything else I can help you with today?
+[2019-11-21 19:34:17,978 PID:23786 NL logger.py nl] System utterance: I have made that reservation and your reference number is 00000002 . Is there anything else I can help you with today?
+[2019-11-21 19:34:18,007 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:18,007 PID:23786 NL logger.py nl] User utterance: On sunday please. There is going to be 1 of us. How about only 4 nights .
+[2019-11-21 19:34:18,007 PID:23786 ACT logger.py act] Inferred user action: On sunday please. There is going to be 1 of us. How about only 4 nights .
+[2019-11-21 19:34:18,007 PID:23786 STATE logger.py state] Dialog state: On sunday please. There is going to be 1 of us. How about only 4 nights .
+[2019-11-21 19:34:20,354 PID:23786 ACT logger.py act] System action: You got it. I have booked it for you. The reference number is 00000002 .
+[2019-11-21 19:34:20,355 PID:23786 NL logger.py nl] System utterance: You got it. I have booked it for you. The reference number is 00000002 .
+[2019-11-21 19:34:20,383 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']]}
+[2019-11-21 19:34:20,383 PID:23786 NL logger.py nl] User utterance: I want to check in on sunday. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:20,384 PID:23786 ACT logger.py act] Inferred user action: I want to check in on sunday. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:20,384 PID:23786 STATE logger.py state] Dialog state: I want to check in on sunday. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:22,618 PID:23786 ACT logger.py act] System action: Okay, I was able to book that for you. The reference number is 00000002 .
+[2019-11-21 19:34:22,618 PID:23786 NL logger.py nl] System utterance: Okay, I was able to book that for you. The reference number is 00000002 .
+[2019-11-21 19:34:22,640 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']]}
+[2019-11-21 19:34:22,640 PID:23786 NL logger.py nl] User utterance: On sunday please. There will be 1 people . What about 4 nights ?
+[2019-11-21 19:34:22,640 PID:23786 ACT logger.py act] Inferred user action: On sunday please. There will be 1 people . What about 4 nights ?
+[2019-11-21 19:34:22,640 PID:23786 STATE logger.py state] Dialog state: On sunday please. There will be 1 people . What about 4 nights ?
+[2019-11-21 19:34:24,693 PID:23786 ACT logger.py act] System action: Booking was successful. Reference number is : 00000002 .
+[2019-11-21 19:34:24,693 PID:23786 NL logger.py nl] System utterance: Booking was successful. Reference number is : 00000002 .
+[2019-11-21 19:34:24,711 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']]}
+[2019-11-21 19:34:24,711 PID:23786 NL logger.py nl] User utterance: Sunday please . Actually , I 'd like to book it for 1 people . Can you help with that ? How about 4 night ? Would that work ?
+[2019-11-21 19:34:24,711 PID:23786 ACT logger.py act] Inferred user action: Sunday please . Actually , I 'd like to book it for 1 people . Can you help with that ? How about 4 night ? Would that work ?
+[2019-11-21 19:34:24,711 PID:23786 STATE logger.py state] Dialog state: Sunday please . Actually , I 'd like to book it for 1 people . Can you help with that ? How about 4 night ? Would that work ?
+[2019-11-21 19:34:27,244 PID:23786 ACT logger.py act] System action: Booking was successful. 
+ Reference number is : 00000002 .
+[2019-11-21 19:34:27,244 PID:23786 NL logger.py nl] System utterance: Booking was successful. 
+ Reference number is : 00000002 .
+[2019-11-21 19:34:27,264 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']]}
+[2019-11-21 19:34:27,264 PID:23786 NL logger.py nl] User utterance: I need a room starting on sunday . That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:27,264 PID:23786 ACT logger.py act] Inferred user action: I need a room starting on sunday . That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:27,264 PID:23786 STATE logger.py state] Dialog state: I need a room starting on sunday . That will work . Can you make a reservation for 1 people , please ? We 'd like to stay for 4 nights .
+[2019-11-21 19:34:31,722 PID:23786 ACT logger.py act] System action: 00000009 <booking-request> <stay> ? <system> <type> monday <system>
+[2019-11-21 19:34:31,722 PID:23786 NL logger.py nl] System utterance: 00000009 <booking-request> <stay> ? <system> <type> monday <system>
+[2019-11-21 19:34:31,749 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:34:31,749 PID:23786 NL logger.py nl] User utterance: On sunday please. I would like to book it for 1 people . Thanks . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:31,749 PID:23786 ACT logger.py act] Inferred user action: On sunday please. I would like to book it for 1 people . Thanks . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:31,749 PID:23786 STATE logger.py state] Dialog state: On sunday please. I would like to book it for 1 people . Thanks . Can you try booking again for 4 nights ?
+[2019-11-21 19:34:36,311 PID:23786 ACT logger.py act] System action: <type> boat <area> east <area> north <area> west <choice> two <choice> one <area> north <system> two <choice> one <choice> one <system> one <choice> one <system> one <choice> one <choice> two <choice> one <system> one <system> one <system> one <system>
+[2019-11-21 19:34:36,311 PID:23786 NL logger.py nl] System utterance: <type> boat <area> east <area> north <area> west <choice> two <choice> one <area> north <system> two <choice> one <choice> one <system> one <choice> one <system> one <choice> one <choice> two <choice> one <system> one <system> one <system> one <system>
+[2019-11-21 19:34:36,375 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Select': [['Area', 'west']], 'Attraction-Inform': [['Area', 'east'], ['Area', 'north'], ['Type', 'boat']]}
+[2019-11-21 19:34:36,375 PID:23786 NL logger.py nl] User utterance: Sunday please . Yes , could you book the hotel room for me for 1 people ? Let 's try 4 nights .
+[2019-11-21 19:34:36,375 PID:23786 ACT logger.py act] Inferred user action: Sunday please . Yes , could you book the hotel room for me for 1 people ? Let 's try 4 nights .
+[2019-11-21 19:34:36,375 PID:23786 STATE logger.py state] Dialog state: Sunday please . Yes , could you book the hotel room for me for 1 people ? Let 's try 4 nights .
+[2019-11-21 19:34:42,257 PID:23786 ACT logger.py act] System action: 
+[2019-11-21 19:34:42,257 PID:23786 NL logger.py nl] System utterance: 
+[2019-11-21 19:34:42,257 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:34:42,257 PID:23786 NL logger.py nl] User utterance: On sunday please. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:42,257 PID:23786 ACT logger.py act] Inferred user action: On sunday please. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:42,257 PID:23786 STATE logger.py state] Dialog state: On sunday please. There are 1 of us . How about only 4 nights .
+[2019-11-21 19:34:47,233 PID:23786 ACT logger.py act] System action: 
+[2019-11-21 19:34:47,233 PID:23786 NL logger.py nl] System utterance: 
+[2019-11-21 19:34:47,233 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:34:47,234 PID:23786 NL logger.py nl] User utterance: Thank you very much , goodbye .
+[2019-11-21 19:34:47,234 PID:23786 ACT logger.py act] Inferred user action: Thank you very much , goodbye .
+[2019-11-21 19:34:47,234 PID:23786 STATE logger.py state] Dialog state: Thank you very much , goodbye .
+[2019-11-21 19:34:47,234 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:34:47,239 PID:23786 ACT logger.py act] User action: {'Hotel-Inform': [['Price', 'cheap']]}
+[2019-11-21 19:34:47,240 PID:23786 ACT logger.py act] Goal: {'hotel': {'info': {'pricerange': 'cheap'}, 'reqt': {'type': '?', 'internet': '?', 'address': '?'}, 'book': {'stay': '3', 'people': '6', 'day': 'friday'}, 'fail_book': {'stay': '3', 'people': '6', 'day': 'thursday'}, 'booked': '?'}, 'restaurant': {'info': {'area': 'centre'}, 'reqt': {'address': '?'}}, 'taxi': {'info': {'arriveBy': '14:45'}, 'reqt': {'car type': '?', 'phone': '?'}}}
+[2019-11-21 19:34:47,240 PID:23786 NL logger.py nl] User utterance: It needs to be in the cheap price range .
+[2019-11-21 19:34:47,240 PID:23786 ACT logger.py act] Inferred user action: It needs to be in the cheap price range .
+[2019-11-21 19:34:47,240 PID:23786 STATE logger.py state] Dialog state: It needs to be in the cheap price range .
+[2019-11-21 19:34:47,829 PID:23786 ACT logger.py act] System action: I have several, is there a particular area you are interested in?
+[2019-11-21 19:34:47,829 PID:23786 NL logger.py nl] System utterance: I have several, is there a particular area you are interested in?
+[2019-11-21 19:34:47,843 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'several']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:34:47,843 PID:23786 NL logger.py nl] User utterance: Could I get their address ? Can I just confirm it has free internet as well. I need the type of place it is , please .
+[2019-11-21 19:34:47,843 PID:23786 ACT logger.py act] Inferred user action: Could I get their address ? Can I just confirm it has free internet as well. I need the type of place it is , please .
+[2019-11-21 19:34:47,843 PID:23786 STATE logger.py state] Dialog state: Could I get their address ? Can I just confirm it has free internet as well. I need the type of place it is , please .
+[2019-11-21 19:34:48,390 PID:23786 ACT logger.py act] System action: The alexander bed and breakfast is a parking yes.
+[2019-11-21 19:34:48,390 PID:23786 NL logger.py nl] System utterance: The alexander bed and breakfast is a parking yes.
+[2019-11-21 19:34:48,409 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Name', 'The alexander bed and breakfast']]}
+[2019-11-21 19:34:48,410 PID:23786 NL logger.py nl] User utterance: I just need the address . Can you tell me if the hotel has internet available ? What type of hotel is it ?
+[2019-11-21 19:34:48,410 PID:23786 ACT logger.py act] Inferred user action: I just need the address . Can you tell me if the hotel has internet available ? What type of hotel is it ?
+[2019-11-21 19:34:48,410 PID:23786 STATE logger.py state] Dialog state: I just need the address . Can you tell me if the hotel has internet available ? What type of hotel is it ?
+[2019-11-21 19:34:48,879 PID:23786 ACT logger.py act] System action: It is a guesthouse.
+[2019-11-21 19:34:48,879 PID:23786 NL logger.py nl] System utterance: It is a guesthouse.
+[2019-11-21 19:34:48,896 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Type', 'guesthouse']]}
+[2019-11-21 19:34:48,896 PID:23786 NL logger.py nl] User utterance: Could I get their address ? No , I just need to know if they have free internet .
+[2019-11-21 19:34:48,896 PID:23786 ACT logger.py act] Inferred user action: Could I get their address ? No , I just need to know if they have free internet .
+[2019-11-21 19:34:48,896 PID:23786 STATE logger.py state] Dialog state: Could I get their address ? No , I just need to know if they have free internet .
+[2019-11-21 19:34:49,558 PID:23786 ACT logger.py act] System action: alexander bed and breakfast has free wifi.  It's located at 56 saint barnabas road .
+[2019-11-21 19:34:49,559 PID:23786 NL logger.py nl] System utterance: alexander bed and breakfast has free wifi.  It's located at 56 saint barnabas road .
+[2019-11-21 19:34:49,580 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Addr', '56 saint barnabas road'], ['Name', 'alexander bed and breakfast'], ['Internet', 'none']]}
+[2019-11-21 19:34:49,580 PID:23786 NL logger.py nl] User utterance: I need a room starting on thursday . I need reservations for 6 . What about 3 nights ?
+[2019-11-21 19:34:49,580 PID:23786 ACT logger.py act] Inferred user action: I need a room starting on thursday . I need reservations for 6 . What about 3 nights ?
+[2019-11-21 19:34:49,580 PID:23786 STATE logger.py state] Dialog state: I need a room starting on thursday . I need reservations for 6 . What about 3 nights ?
+[2019-11-21 19:34:50,263 PID:23786 ACT logger.py act] System action: I would be happy to help with your request, how many people will be staying?
+[2019-11-21 19:34:50,263 PID:23786 NL logger.py nl] System utterance: I would be happy to help with your request, how many people will be staying?
+[2019-11-21 19:34:50,286 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Request': [['Day', '?'], ['People', '?']]}
+[2019-11-21 19:34:50,286 PID:23786 NL logger.py nl] User utterance: There will be 6 people . Great , can you book that for first day thursday please ?
+[2019-11-21 19:34:50,286 PID:23786 ACT logger.py act] Inferred user action: There will be 6 people . Great , can you book that for first day thursday please ?
+[2019-11-21 19:34:50,286 PID:23786 STATE logger.py state] Dialog state: There will be 6 people . Great , can you book that for first day thursday please ?
+[2019-11-21 19:34:50,975 PID:23786 ACT logger.py act] System action: I have made those reservations and your reference number is 00000002 .
+[2019-11-21 19:34:50,975 PID:23786 NL logger.py nl] System utterance: I have made those reservations and your reference number is 00000002 .
+[2019-11-21 19:34:50,995 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000002']]}
+[2019-11-21 19:34:50,996 PID:23786 NL logger.py nl] User utterance: That 's all I need for today . Thanks for your help !.
+[2019-11-21 19:34:50,996 PID:23786 ACT logger.py act] Inferred user action: That 's all I need for today . Thanks for your help !.
+[2019-11-21 19:34:50,996 PID:23786 STATE logger.py state] Dialog state: That 's all I need for today . Thanks for your help !.
+[2019-11-21 19:34:51,772 PID:23786 ACT logger.py act] System action: You're welcome. Have a great day!
+[2019-11-21 19:34:51,772 PID:23786 NL logger.py nl] System utterance: You're welcome. Have a great day!
+[2019-11-21 19:34:51,788 PID:23786 ACT logger.py act] Inferred system action: {'general-bye': [['none', 'none']], 'general-welcome': [['none', 'none']]}
+[2019-11-21 19:34:51,789 PID:23786 NL logger.py nl] User utterance: What restaurants are located in the centre ?
+[2019-11-21 19:34:51,789 PID:23786 ACT logger.py act] Inferred user action: What restaurants are located in the centre ?
+[2019-11-21 19:34:51,789 PID:23786 STATE logger.py state] Dialog state: What restaurants are located in the centre ?
+[2019-11-21 19:34:52,638 PID:23786 ACT logger.py act] System action: There are many to choose from, do you have a type in mind?
+[2019-11-21 19:34:52,638 PID:23786 NL logger.py nl] System utterance: There are many to choose from, do you have a type in mind?
+[2019-11-21 19:34:52,659 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Choice', 'many']], 'Restaurant-Request': [['Food', '?']], 'Attraction-Request': [['Type', '?']]}
+[2019-11-21 19:34:52,659 PID:23786 NL logger.py nl] User utterance: I ' m visiting Cambridge and would like some suggestions for an restaurant which serves don't care .
+[2019-11-21 19:34:52,659 PID:23786 ACT logger.py act] Inferred user action: I ' m visiting Cambridge and would like some suggestions for an restaurant which serves don't care .
+[2019-11-21 19:34:52,659 PID:23786 STATE logger.py state] Dialog state: I ' m visiting Cambridge and would like some suggestions for an restaurant which serves don't care .
+[2019-11-21 19:34:53,516 PID:23786 ACT logger.py act] System action: There are many. Do you have a price range?
+[2019-11-21 19:34:53,517 PID:23786 NL logger.py nl] System utterance: There are many. Do you have a price range?
+[2019-11-21 19:34:53,534 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'many']], 'Hotel-Request': [['Price', '?']], 'Restaurant-Request': [['Price', '?']]}
+[2019-11-21 19:34:53,534 PID:23786 NL logger.py nl] User utterance: What is the address ?
+[2019-11-21 19:34:53,534 PID:23786 ACT logger.py act] Inferred user action: What is the address ?
+[2019-11-21 19:34:53,535 PID:23786 STATE logger.py state] Dialog state: What is the address ?
+[2019-11-21 19:34:54,213 PID:23786 ACT logger.py act] System action: pizza hut city centre is located at Regent Street City Centre
+[2019-11-21 19:34:54,213 PID:23786 NL logger.py nl] System utterance: pizza hut city centre is located at Regent Street City Centre
+[2019-11-21 19:34:54,229 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Name', 'pizza hut city centre'], ['Addr', 'Regent Street City Centre']]}
+[2019-11-21 19:34:54,229 PID:23786 NL logger.py nl] User utterance: I also need a cheap place to stay .
+[2019-11-21 19:34:54,229 PID:23786 ACT logger.py act] Inferred user action: I also need a cheap place to stay .
+[2019-11-21 19:34:54,229 PID:23786 STATE logger.py state] Dialog state: I also need a cheap place to stay .
+[2019-11-21 19:34:55,131 PID:23786 ACT logger.py act] System action: In what area would you like to stay?
+[2019-11-21 19:34:55,131 PID:23786 NL logger.py nl] System utterance: In what area would you like to stay?
+[2019-11-21 19:34:55,145 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:34:55,145 PID:23786 NL logger.py nl] User utterance: I ' m looking for a place to stay in the don't care part of town .
+[2019-11-21 19:34:55,145 PID:23786 ACT logger.py act] Inferred user action: I ' m looking for a place to stay in the don't care part of town .
+[2019-11-21 19:34:55,145 PID:23786 STATE logger.py state] Dialog state: I ' m looking for a place to stay in the don't care part of town .
+[2019-11-21 19:34:56,404 PID:23786 ACT logger.py act] System action: I have a couple of options for you. Do you have a preference on the area?
+[2019-11-21 19:34:56,404 PID:23786 NL logger.py nl] System utterance: I have a couple of options for you. Do you have a preference on the area?
+[2019-11-21 19:34:56,423 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Choice', 'a couple']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:34:56,423 PID:23786 NL logger.py nl] User utterance: I would like to arrive by 14:45 .
+[2019-11-21 19:34:56,424 PID:23786 ACT logger.py act] Inferred user action: I would like to arrive by 14:45 .
+[2019-11-21 19:34:56,424 PID:23786 STATE logger.py state] Dialog state: I would like to arrive by 14:45 .
+[2019-11-21 19:34:57,910 PID:23786 ACT logger.py act] System action: How about alexander bed and breakfast ?  Would you like me to book a room for you?
+[2019-11-21 19:34:57,910 PID:23786 NL logger.py nl] System utterance: How about alexander bed and breakfast ?  Would you like me to book a room for you?
+[2019-11-21 19:34:57,931 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Recommend': [['Name', 'alexander bed and breakfast']], 'Booking-Inform': [['none', 'none']]}
+[2019-11-21 19:34:57,931 PID:23786 NL logger.py nl] User utterance: Can you get me the contact phone number please ? It would be nice if you would tell me the car type .
+[2019-11-21 19:34:57,931 PID:23786 ACT logger.py act] Inferred user action: Can you get me the contact phone number please ? It would be nice if you would tell me the car type .
+[2019-11-21 19:34:57,931 PID:23786 STATE logger.py state] Dialog state: Can you get me the contact phone number please ? It would be nice if you would tell me the car type .
+[2019-11-21 19:34:59,786 PID:23786 ACT logger.py act] System action: Certainly. The phone number is 01223525725 . Can I help you with anything else?
+[2019-11-21 19:34:59,786 PID:23786 NL logger.py nl] System utterance: Certainly. The phone number is 01223525725 . Can I help you with anything else?
+[2019-11-21 19:34:59,807 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Phone', '01223525725']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:34:59,807 PID:23786 NL logger.py nl] User utterance: Could you please send me the phone number . Could I have the car type for this trip ?
+[2019-11-21 19:34:59,807 PID:23786 ACT logger.py act] Inferred user action: Could you please send me the phone number . Could I have the car type for this trip ?
+[2019-11-21 19:34:59,807 PID:23786 STATE logger.py state] Dialog state: Could you please send me the phone number . Could I have the car type for this trip ?
+[2019-11-21 19:35:01,362 PID:23786 ACT logger.py act] System action: Sure! Where will you be going?
+[2019-11-21 19:35:01,363 PID:23786 NL logger.py nl] System utterance: Sure! Where will you be going?
+[2019-11-21 19:35:01,384 PID:23786 ACT logger.py act] Inferred system action: {'Taxi-Request': [['Dest', '?']]}
+[2019-11-21 19:35:01,384 PID:23786 NL logger.py nl] User utterance: I want to visit the Regent Street City Centre and need a taxi to take me.
+[2019-11-21 19:35:01,384 PID:23786 ACT logger.py act] Inferred user action: I want to visit the Regent Street City Centre and need a taxi to take me.
+[2019-11-21 19:35:01,384 PID:23786 STATE logger.py state] Dialog state: I want to visit the Regent Street City Centre and need a taxi to take me.
+[2019-11-21 19:35:03,758 PID:23786 ACT logger.py act] System action: I need to know where you will be departing from and going to and what time you want to leave.
+[2019-11-21 19:35:03,758 PID:23786 NL logger.py nl] System utterance: I need to know where you will be departing from and going to and what time you want to leave.
+[2019-11-21 19:35:03,780 PID:23786 ACT logger.py act] Inferred system action: {'Taxi-Request': [['Leave', '?'], ['Depart', '?'], ['Arrive', '?']]}
+[2019-11-21 19:35:03,780 PID:23786 NL logger.py nl] User utterance: I 'd like to get to the Gallery by 14:45 , please . I am leaving from the 56 saint barnabas road . Hi , I need to book a taxi , please ? I need to leave sometime after don't care .
+[2019-11-21 19:35:03,781 PID:23786 ACT logger.py act] Inferred user action: I 'd like to get to the Gallery by 14:45 , please . I am leaving from the 56 saint barnabas road . Hi , I need to book a taxi , please ? I need to leave sometime after don't care .
+[2019-11-21 19:35:03,781 PID:23786 STATE logger.py state] Dialog state: I 'd like to get to the Gallery by 14:45 , please . I am leaving from the 56 saint barnabas road . Hi , I need to book a taxi , please ? I need to leave sometime after don't care .
+[2019-11-21 19:35:07,796 PID:23786 ACT logger.py act] System action: <none> none <general-reqmore> <none> none <system> <none> none <system> <none> none <system> none <system> <none> none <system> grey toyota <system> 0 <system> no <name> [hotel_name] <system> <none> none <system> none <system> <none> none <system> <name> [hotel_name] <system> <type>
+[2019-11-21 19:35:07,796 PID:23786 NL logger.py nl] System utterance: <none> none <general-reqmore> <none> none <system> <none> none <system> <none> none <system> none <system> <none> none <system> grey toyota <system> 0 <system> no <name> [hotel_name] <system> <none> none <system> none <system> <none> none <system> <name> [hotel_name] <system> <type>
+[2019-11-21 19:35:07,862 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:35:07,863 PID:23786 NL logger.py nl] User utterance: Do you have their phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:07,863 PID:23786 ACT logger.py act] Inferred user action: Do you have their phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:07,863 PID:23786 STATE logger.py state] Dialog state: Do you have their phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:11,465 PID:23786 ACT logger.py act] System action: <none> none <system> <price> cheap <area> north <name> error <system> <type> guesthouse <system> <none> none <system> <area> ? <system> <area> ? <price> ? <hotel-inform> <type> guesthouse <system> none <system> <area> north <system> none <system>
+[2019-11-21 19:35:11,465 PID:23786 NL logger.py nl] System utterance: <none> none <system> <price> cheap <area> north <name> error <system> <type> guesthouse <system> <none> none <system> <area> ? <system> <area> ? <price> ? <hotel-inform> <type> guesthouse <system> none <system> <area> north <system> none <system>
+[2019-11-21 19:35:11,533 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:35:11,533 PID:23786 NL logger.py nl] User utterance: Can I get the phone also please ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:11,533 PID:23786 ACT logger.py act] Inferred user action: Can I get the phone also please ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:11,533 PID:23786 STATE logger.py state] Dialog state: Can I get the phone also please ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:15,574 PID:23786 ACT logger.py act] System action: <type> guesthouse <area> north <system> <area> north <system> <none> none <system> <type> guesthouse <system> none <system> none <system> <area> north <name> error <system> <type> guesthouse <system> none <system> none <system> <none> none <system>
+[2019-11-21 19:35:15,574 PID:23786 NL logger.py nl] System utterance: <type> guesthouse <area> north <system> <area> north <system> <none> none <system> <type> guesthouse <system> none <system> none <system> <area> north <name> error <system> <type> guesthouse <system> none <system> none <system> <none> none <system>
+[2019-11-21 19:35:15,633 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Type', 'guesthouse'], ['Phone', 'none']], 'Hotel-Request': [['Type', '?']]}
+[2019-11-21 19:35:15,633 PID:23786 NL logger.py nl] User utterance: Can I get the phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:15,634 PID:23786 ACT logger.py act] Inferred user action: Can I get the phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:15,634 PID:23786 STATE logger.py state] Dialog state: Can I get the phone number ? Yes I would like the car type please for my booking .
+[2019-11-21 19:35:18,029 PID:23786 ACT logger.py act] System action: 
+[2019-11-21 19:35:18,029 PID:23786 NL logger.py nl] System utterance: 
+[2019-11-21 19:35:18,030 PID:23786 ACT logger.py act] Inferred system action: {}
+[2019-11-21 19:35:18,030 PID:23786 NL logger.py nl] User utterance: That 's all the help I need . Take care . Bye .
+[2019-11-21 19:35:18,030 PID:23786 ACT logger.py act] Inferred user action: That 's all the help I need . Take care . Bye .
+[2019-11-21 19:35:18,030 PID:23786 STATE logger.py state] Dialog state: That 's all the help I need . Take care . Bye .
+[2019-11-21 19:35:18,030 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:18,035 PID:23786 ACT logger.py act] User action: {'Attraction-Inform': [['Area', 'east']]}
+[2019-11-21 19:35:18,035 PID:23786 ACT logger.py act] Goal: {'attraction': {'info': {'area': 'east'}, 'reqt': {'postcode': '?', 'address': '?', 'phone': '?'}}, 'hotel': {'info': {'pricerange': 'expensive', 'internet': 'yes'}, 'reqt': {'postcode': '?', 'address': '?'}}, 'taxi': {'info': {'leaveAt': '20:30'}, 'reqt': {'car type': '?', 'phone': '?'}}}
+[2019-11-21 19:35:18,035 PID:23786 NL logger.py nl] User utterance: I am also looking for suggestions on places to go in the east of town . Can you help me with that ?
+[2019-11-21 19:35:18,035 PID:23786 ACT logger.py act] Inferred user action: I am also looking for suggestions on places to go in the east of town . Can you help me with that ?
+[2019-11-21 19:35:18,035 PID:23786 STATE logger.py state] Dialog state: I am also looking for suggestions on places to go in the east of town . Can you help me with that ?
+[2019-11-21 19:35:18,547 PID:23786 ACT logger.py act] System action: I have several attractions in the east. Is there a particular type you are looking for?
+[2019-11-21 19:35:18,547 PID:23786 NL logger.py nl] System utterance: I have several attractions in the east. Is there a particular type you are looking for?
+[2019-11-21 19:35:18,565 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Area', 'east'], ['Choice', 'several']], 'Attraction-Request': [['Type', '?']]}
+[2019-11-21 19:35:18,565 PID:23786 NL logger.py nl] User utterance: A don't care type of attraction .
+[2019-11-21 19:35:18,565 PID:23786 ACT logger.py act] Inferred user action: A don't care type of attraction .
+[2019-11-21 19:35:18,565 PID:23786 STATE logger.py state] Dialog state: A don't care type of attraction .
+[2019-11-21 19:35:18,813 PID:23786 ACT logger.py act] System action: I would suggest abbey pool and astroturf pitch .
+[2019-11-21 19:35:18,813 PID:23786 NL logger.py nl] System utterance: I would suggest abbey pool and astroturf pitch .
+[2019-11-21 19:35:18,830 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Recommend': [['Name', 'abbey pool and astroturf pitch']]}
+[2019-11-21 19:35:18,831 PID:23786 NL logger.py nl] User utterance: What is the phone number ? What is the address ? What is the postcode for this place ?
+[2019-11-21 19:35:18,831 PID:23786 ACT logger.py act] Inferred user action: What is the phone number ? What is the address ? What is the postcode for this place ?
+[2019-11-21 19:35:18,831 PID:23786 STATE logger.py state] Dialog state: What is the phone number ? What is the address ? What is the postcode for this place ?
+[2019-11-21 19:35:19,257 PID:23786 ACT logger.py act] System action: The address for abbey pool and astroturf pitch is pool way, whitehill road, off newmarket road and the postcode is cb58nt .
+[2019-11-21 19:35:19,257 PID:23786 NL logger.py nl] System utterance: The address for abbey pool and astroturf pitch is pool way, whitehill road, off newmarket road and the postcode is cb58nt .
+[2019-11-21 19:35:19,280 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Addr', 'off newmarket road'], ['Name', 'abbey pool and astroturf pitch'], ['Addr', 'whitehill road'], ['Post', 'cb58nt'], ['Addr', 'pool way']]}
+[2019-11-21 19:35:19,280 PID:23786 NL logger.py nl] User utterance: Can I get the phone number of one ?
+[2019-11-21 19:35:19,280 PID:23786 ACT logger.py act] Inferred user action: Can I get the phone number of one ?
+[2019-11-21 19:35:19,280 PID:23786 STATE logger.py state] Dialog state: Can I get the phone number of one ?
+[2019-11-21 19:35:19,562 PID:23786 ACT logger.py act] System action: The phone number is 01223902088 .
+[2019-11-21 19:35:19,562 PID:23786 NL logger.py nl] System utterance: The phone number is 01223902088 .
+[2019-11-21 19:35:19,579 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Phone', '01223902088']]}
+[2019-11-21 19:35:19,579 PID:23786 NL logger.py nl] User utterance: I ' m looking for some expensive priced accommodations for my visit . Can you help me with that ? I need one with wifi .
+[2019-11-21 19:35:19,579 PID:23786 ACT logger.py act] Inferred user action: I ' m looking for some expensive priced accommodations for my visit . Can you help me with that ? I need one with wifi .
+[2019-11-21 19:35:19,579 PID:23786 STATE logger.py state] Dialog state: I ' m looking for some expensive priced accommodations for my visit . Can you help me with that ? I need one with wifi .
+[2019-11-21 19:35:20,287 PID:23786 ACT logger.py act] System action: I have many options available. Do you have an area in mind?
+[2019-11-21 19:35:20,287 PID:23786 NL logger.py nl] System utterance: I have many options available. Do you have an area in mind?
+[2019-11-21 19:35:20,306 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'many']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:35:20,306 PID:23786 NL logger.py nl] User utterance: I need it in the don't care , please .
+[2019-11-21 19:35:20,306 PID:23786 ACT logger.py act] Inferred user action: I need it in the don't care , please .
+[2019-11-21 19:35:20,306 PID:23786 STATE logger.py state] Dialog state: I need it in the don't care , please .
+[2019-11-21 19:35:20,952 PID:23786 ACT logger.py act] System action: We have 5 places, any preference on area?
+[2019-11-21 19:35:20,952 PID:23786 NL logger.py nl] System utterance: We have 5 places, any preference on area?
+[2019-11-21 19:35:20,970 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', '5']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:35:20,970 PID:23786 NL logger.py nl] User utterance: I need it in the don't care , please .
+[2019-11-21 19:35:20,970 PID:23786 ACT logger.py act] Inferred user action: I need it in the don't care , please .
+[2019-11-21 19:35:20,970 PID:23786 STATE logger.py state] Dialog state: I need it in the don't care , please .
+[2019-11-21 19:35:21,794 PID:23786 ACT logger.py act] System action: I 'd suggest express by holiday inn cambridge . Would you like me to book a room for you?
+[2019-11-21 19:35:21,794 PID:23786 NL logger.py nl] System utterance: I 'd suggest express by holiday inn cambridge . Would you like me to book a room for you?
+[2019-11-21 19:35:21,814 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Recommend': [['Name', 'express by holiday inn cambridge']], 'Booking-Inform': [['none', 'none']]}
+[2019-11-21 19:35:21,814 PID:23786 NL logger.py nl] User utterance: Can you give me the address please ? Can I please have the post code ?
+[2019-11-21 19:35:21,814 PID:23786 ACT logger.py act] Inferred user action: Can you give me the address please ? Can I please have the post code ?
+[2019-11-21 19:35:21,814 PID:23786 STATE logger.py state] Dialog state: Can you give me the address please ? Can I please have the post code ?
+[2019-11-21 19:35:22,525 PID:23786 ACT logger.py act] System action: The address is 15-17 norman way, coldhams business park , postcode cb13lh .
+[2019-11-21 19:35:22,525 PID:23786 NL logger.py nl] System utterance: The address is 15-17 norman way, coldhams business park , postcode cb13lh .
+[2019-11-21 19:35:22,546 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Addr', 'coldhams business park'], ['Addr', '15 - 17 norman way'], ['Post', 'cb13lh']]}
+[2019-11-21 19:35:22,546 PID:23786 NL logger.py nl] User utterance: I want to leave after 20:30 .
+[2019-11-21 19:35:22,546 PID:23786 ACT logger.py act] Inferred user action: I want to leave after 20:30 .
+[2019-11-21 19:35:22,546 PID:23786 STATE logger.py state] Dialog state: I want to leave after 20:30 .
+[2019-11-21 19:35:23,476 PID:23786 ACT logger.py act] System action: I need to find a train for you to leave before 20:30, anything else?
+[2019-11-21 19:35:23,476 PID:23786 NL logger.py nl] System utterance: I need to find a train for you to leave before 20:30, anything else?
+[2019-11-21 19:35:23,495 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Leave', '20:30']]}
+[2019-11-21 19:35:23,495 PID:23786 NL logger.py nl] User utterance: Can I get the phone also please ? What is the car type for the taxi ?
+[2019-11-21 19:35:23,495 PID:23786 ACT logger.py act] Inferred user action: Can I get the phone also please ? What is the car type for the taxi ?
+[2019-11-21 19:35:23,495 PID:23786 STATE logger.py state] Dialog state: Can I get the phone also please ? What is the car type for the taxi ?
+[2019-11-21 19:35:24,441 PID:23786 ACT logger.py act] System action: Where are you headed?
+[2019-11-21 19:35:24,441 PID:23786 NL logger.py nl] System utterance: Where are you headed?
+[2019-11-21 19:35:24,455 PID:23786 ACT logger.py act] Inferred system action: {'Taxi-Request': [['Dest', '?']]}
+[2019-11-21 19:35:24,455 PID:23786 NL logger.py nl] User utterance: I want to visit the 15-17 norman way, coldhams business park and need a taxi to take me.
+[2019-11-21 19:35:24,455 PID:23786 ACT logger.py act] Inferred user action: I want to visit the 15-17 norman way, coldhams business park and need a taxi to take me.
+[2019-11-21 19:35:24,455 PID:23786 STATE logger.py state] Dialog state: I want to visit the 15-17 norman way, coldhams business park and need a taxi to take me.
+[2019-11-21 19:35:25,505 PID:23786 ACT logger.py act] System action: Where are you leaving from?
+[2019-11-21 19:35:25,505 PID:23786 NL logger.py nl] System utterance: Where are you leaving from?
+[2019-11-21 19:35:25,520 PID:23786 ACT logger.py act] Inferred system action: {'Taxi-Request': [['Depart', '?']]}
+[2019-11-21 19:35:25,520 PID:23786 NL logger.py nl] User utterance: I want to depart from pool way, whitehill road, off newmarket road.
+[2019-11-21 19:35:25,520 PID:23786 ACT logger.py act] Inferred user action: I want to depart from pool way, whitehill road, off newmarket road.
+[2019-11-21 19:35:25,520 PID:23786 STATE logger.py state] Dialog state: I want to depart from pool way, whitehill road, off newmarket road.
+[2019-11-21 19:35:27,068 PID:23786 ACT logger.py act] System action: Your taxi will be a white honda and the contact number is 01223351880 .
+[2019-11-21 19:35:27,068 PID:23786 NL logger.py nl] System utterance: Your taxi will be a white honda and the contact number is 01223351880 .
+[2019-11-21 19:35:27,087 PID:23786 ACT logger.py act] Inferred system action: {'Taxi-Inform': [['Phone', '01223351880'], ['Car', 'white honda']]}
+[2019-11-21 19:35:27,087 PID:23786 NL logger.py nl] User utterance: Actually , I ' m all set . Thank you ! Bye !.
+[2019-11-21 19:35:27,087 PID:23786 ACT logger.py act] Inferred user action: Actually , I ' m all set . Thank you ! Bye !.
+[2019-11-21 19:35:27,087 PID:23786 STATE logger.py state] Dialog state: Actually , I ' m all set . Thank you ! Bye !.
+[2019-11-21 19:35:27,088 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:27,101 PID:23786 ACT logger.py act] User action: {'Train-Inform': [['Day', 'sunday']]}
+[2019-11-21 19:35:27,101 PID:23786 ACT logger.py act] Goal: {'train': {'info': {'destination': 'cambridge', 'day': 'sunday', 'departure': 'kings lynn', 'arriveBy': '19:45'}, 'reqt': {'duration': '?'}}, 'attraction': {'info': {'area': 'east', 'type': 'museum'}, 'reqt': {'entrance fee': '?', 'address': '?', 'phone': '?'}}}
+[2019-11-21 19:35:27,101 PID:23786 NL logger.py nl] User utterance: I would like to leave on sunday .
+[2019-11-21 19:35:27,101 PID:23786 ACT logger.py act] Inferred user action: I would like to leave on sunday .
+[2019-11-21 19:35:27,101 PID:23786 STATE logger.py state] Dialog state: I would like to leave on sunday .
+[2019-11-21 19:35:27,640 PID:23786 ACT logger.py act] System action: Ok, what is your destination?
+[2019-11-21 19:35:27,640 PID:23786 NL logger.py nl] System utterance: Ok, what is your destination?
+[2019-11-21 19:35:27,649 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Dest', '?']]}
+[2019-11-21 19:35:27,649 PID:23786 NL logger.py nl] User utterance: I am going to cambridge.
+[2019-11-21 19:35:27,649 PID:23786 ACT logger.py act] Inferred user action: I am going to cambridge.
+[2019-11-21 19:35:27,649 PID:23786 STATE logger.py state] Dialog state: I am going to cambridge.
+[2019-11-21 19:35:28,187 PID:23786 ACT logger.py act] System action: Where are you leaving from?
+[2019-11-21 19:35:28,187 PID:23786 NL logger.py nl] System utterance: Where are you leaving from?
+[2019-11-21 19:35:28,198 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Depart', '?']]}
+[2019-11-21 19:35:28,198 PID:23786 NL logger.py nl] User utterance: I ' m also looking for a train from kings lynn .
+[2019-11-21 19:35:28,199 PID:23786 ACT logger.py act] Inferred user action: I ' m also looking for a train from kings lynn .
+[2019-11-21 19:35:28,199 PID:23786 STATE logger.py state] Dialog state: I ' m also looking for a train from kings lynn .
+[2019-11-21 19:35:28,954 PID:23786 ACT logger.py act] System action: What time do you want to leave and/or arrive by?
+[2019-11-21 19:35:28,954 PID:23786 NL logger.py nl] System utterance: What time do you want to leave and/or arrive by?
+[2019-11-21 19:35:28,971 PID:23786 ACT logger.py act] Inferred system action: {'Train-Request': [['Leave', '?'], ['Arrive', '?']]}
+[2019-11-21 19:35:28,971 PID:23786 NL logger.py nl] User utterance: I need it to arrive by 19:45 . I would like to leave anytime after don't care .
+[2019-11-21 19:35:28,971 PID:23786 ACT logger.py act] Inferred user action: I need it to arrive by 19:45 . I would like to leave anytime after don't care .
+[2019-11-21 19:35:28,971 PID:23786 STATE logger.py state] Dialog state: I need it to arrive by 19:45 . I would like to leave anytime after don't care .
+[2019-11-21 19:35:29,951 PID:23786 ACT logger.py act] System action: I have train TR2631 that arrives at 19:44 would you like me to book that for you?
+[2019-11-21 19:35:29,951 PID:23786 NL logger.py nl] System utterance: I have train TR2631 that arrives at 19:44 would you like me to book that for you?
+[2019-11-21 19:35:29,972 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Arrive', '19:44'], ['Id', 'TR2631']], 'Train-OfferBook': [['none', 'none']]}
+[2019-11-21 19:35:29,972 PID:23786 NL logger.py nl] User utterance: Can you please give me the travel time .
+[2019-11-21 19:35:29,973 PID:23786 ACT logger.py act] Inferred user action: Can you please give me the travel time .
+[2019-11-21 19:35:29,973 PID:23786 STATE logger.py state] Dialog state: Can you please give me the travel time .
+[2019-11-21 19:35:30,653 PID:23786 ACT logger.py act] System action: It is 163 minutes.
+[2019-11-21 19:35:30,653 PID:23786 NL logger.py nl] System utterance: It is 163 minutes.
+[2019-11-21 19:35:30,668 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Time', '163 minutes']]}
+[2019-11-21 19:35:30,668 PID:23786 NL logger.py nl] User utterance: I am looking for a museum to visit . Are there anything fun to do in city east ?
+[2019-11-21 19:35:30,668 PID:23786 ACT logger.py act] Inferred user action: I am looking for a museum to visit . Are there anything fun to do in city east ?
+[2019-11-21 19:35:30,669 PID:23786 STATE logger.py state] Dialog state: I am looking for a museum to visit . Are there anything fun to do in city east ?
+[2019-11-21 19:35:30,967 PID:23786 ACT logger.py act] System action: I would suggest cambridge artworks .
+[2019-11-21 19:35:30,967 PID:23786 NL logger.py nl] System utterance: I would suggest cambridge artworks .
+[2019-11-21 19:35:30,980 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Recommend': [['Name', 'cambridge artworks']]}
+[2019-11-21 19:35:30,981 PID:23786 NL logger.py nl] User utterance: What is the phone number ? Just the address please. Can you just recommend one and tell me the entrance fee ?
+[2019-11-21 19:35:30,981 PID:23786 ACT logger.py act] Inferred user action: What is the phone number ? Just the address please. Can you just recommend one and tell me the entrance fee ?
+[2019-11-21 19:35:30,981 PID:23786 STATE logger.py state] Dialog state: What is the phone number ? Just the address please. Can you just recommend one and tell me the entrance fee ?
+[2019-11-21 19:35:31,641 PID:23786 ACT logger.py act] System action: cambridge artworks is free. The phone number is 01223902168 . Can I help with anything else?
+[2019-11-21 19:35:31,642 PID:23786 NL logger.py nl] System utterance: cambridge artworks is free. The phone number is 01223902168 . Can I help with anything else?
+[2019-11-21 19:35:31,663 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Name', 'cambridge artworks'], ['Fee', 'free'], ['Phone', '01223902168']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:35:31,663 PID:23786 NL logger.py nl] User utterance: Could I get the address for it ?
+[2019-11-21 19:35:31,663 PID:23786 ACT logger.py act] Inferred user action: Could I get the address for it ?
+[2019-11-21 19:35:31,663 PID:23786 STATE logger.py state] Dialog state: Could I get the address for it ?
+[2019-11-21 19:35:32,024 PID:23786 ACT logger.py act] System action: The address is 5 greens road
+[2019-11-21 19:35:32,024 PID:23786 NL logger.py nl] System utterance: The address is 5 greens road
+[2019-11-21 19:35:32,040 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Addr', '5 greens road']]}
+[2019-11-21 19:35:32,041 PID:23786 NL logger.py nl] User utterance: Ok , have a good day . Goodbye .
+[2019-11-21 19:35:32,041 PID:23786 ACT logger.py act] Inferred user action: Ok , have a good day . Goodbye .
+[2019-11-21 19:35:32,041 PID:23786 STATE logger.py state] Dialog state: Ok , have a good day . Goodbye .
+[2019-11-21 19:35:32,041 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:32,062 PID:23786 ACT logger.py act] User action: {'Train-Inform': [['Dest', 'cambridge'], ['Depart', 'ely'], ['Arrive', '08:45'], ['Day', 'sunday']]}
+[2019-11-21 19:35:32,063 PID:23786 ACT logger.py act] Goal: {'train': {'info': {'destination': 'cambridge', 'day': 'sunday', 'arriveBy': '08:45', 'departure': 'ely'}, 'reqt': {'price': '?'}}, 'hotel': {'info': {'name': 'kirkwood house'}, 'reqt': {'internet': '?', 'pricerange': '?'}, 'book': {'stay': '3', 'day': 'sunday', 'people': '7'}, 'booked': '?'}}
+[2019-11-21 19:35:32,063 PID:23786 NL logger.py nl] User utterance: Can you tell me when that train will be arriving in cambridge ? I need it to depart from ely . I want to get there by 08:45 at the latest . I need to travel on sunday .
+[2019-11-21 19:35:32,063 PID:23786 ACT logger.py act] Inferred user action: Can you tell me when that train will be arriving in cambridge ? I need it to depart from ely . I want to get there by 08:45 at the latest . I need to travel on sunday .
+[2019-11-21 19:35:32,063 PID:23786 STATE logger.py state] Dialog state: Can you tell me when that train will be arriving in cambridge ? I need it to depart from ely . I want to get there by 08:45 at the latest . I need to travel on sunday .
+[2019-11-21 19:35:33,187 PID:23786 ACT logger.py act] System action: The TR7291 leaves Ely at 06:01 and arrives in Cambridge at 08:44. Would you like to book a ticket?
+[2019-11-21 19:35:33,187 PID:23786 NL logger.py nl] System utterance: The TR7291 leaves Ely at 06:01 and arrives in Cambridge at 08:44. Would you like to book a ticket?
+[2019-11-21 19:35:33,209 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Depart', 'Ely'], ['Arrive', '08:44'], ['Leave', '06:01'], ['Id', 'TR7291'], ['Dest', 'Cambridge']], 'Train-OfferBook': [['none', 'none']]}
+[2019-11-21 19:35:33,209 PID:23786 NL logger.py nl] User utterance: What is the price of a ticket , please ?
+[2019-11-21 19:35:33,210 PID:23786 ACT logger.py act] Inferred user action: What is the price of a ticket , please ?
+[2019-11-21 19:35:33,210 PID:23786 STATE logger.py state] Dialog state: What is the price of a ticket , please ?
+[2019-11-21 19:35:33,913 PID:23786 ACT logger.py act] System action: The price is 4.40 pounds.
+[2019-11-21 19:35:33,913 PID:23786 NL logger.py nl] System utterance: The price is 4.40 pounds.
+[2019-11-21 19:35:33,932 PID:23786 ACT logger.py act] Inferred system action: {'Train-Inform': [['Ticket', '4.40 pounds']]}
+[2019-11-21 19:35:33,933 PID:23786 NL logger.py nl] User utterance: I ' m looking for information on a hotel called kirkwood house .
+[2019-11-21 19:35:33,933 PID:23786 ACT logger.py act] Inferred user action: I ' m looking for information on a hotel called kirkwood house .
+[2019-11-21 19:35:33,933 PID:23786 STATE logger.py state] Dialog state: I ' m looking for information on a hotel called kirkwood house .
+[2019-11-21 19:35:34,809 PID:23786 ACT logger.py act] System action: it is a guesthouse in the north in the moderate price range. i have 4 stars
+[2019-11-21 19:35:34,810 PID:23786 NL logger.py nl] System utterance: it is a guesthouse in the north in the moderate price range. i have 4 stars
+[2019-11-21 19:35:34,829 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Type', 'guesthouse'], ['Stars', '4'], ['Price', 'moderate'], ['Area', 'north']]}
+[2019-11-21 19:35:34,829 PID:23786 NL logger.py nl] User utterance: Do they have free wifi ?
+[2019-11-21 19:35:34,829 PID:23786 ACT logger.py act] Inferred user action: Do they have free wifi ?
+[2019-11-21 19:35:34,829 PID:23786 STATE logger.py state] Dialog state: Do they have free wifi ?
+[2019-11-21 19:35:35,358 PID:23786 ACT logger.py act] System action: yes they do.
+[2019-11-21 19:35:35,358 PID:23786 NL logger.py nl] System utterance: yes they do.
+[2019-11-21 19:35:35,371 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Internet', 'none']]}
+[2019-11-21 19:35:35,371 PID:23786 NL logger.py nl] User utterance: Yes , could you book the hotel room for me for 7 people ? Let 's try for sunday. How about only 3 nights .
+[2019-11-21 19:35:35,371 PID:23786 ACT logger.py act] Inferred user action: Yes , could you book the hotel room for me for 7 people ? Let 's try for sunday. How about only 3 nights .
+[2019-11-21 19:35:35,371 PID:23786 STATE logger.py state] Dialog state: Yes , could you book the hotel room for me for 7 people ? Let 's try for sunday. How about only 3 nights .
+[2019-11-21 19:35:36,225 PID:23786 ACT logger.py act] System action: Booking was successful. 
+ Reference number is : 00000023 .  Anything else?
+[2019-11-21 19:35:36,225 PID:23786 NL logger.py nl] System utterance: Booking was successful. 
+ Reference number is : 00000023 .  Anything else?
+[2019-11-21 19:35:36,242 PID:23786 ACT logger.py act] Inferred system action: {'Booking-Book': [['Ref', '00000023']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:35:36,242 PID:23786 NL logger.py nl] User utterance: You were great . Goodbye .
+[2019-11-21 19:35:36,242 PID:23786 ACT logger.py act] Inferred user action: You were great . Goodbye .
+[2019-11-21 19:35:36,243 PID:23786 STATE logger.py state] Dialog state: You were great . Goodbye .
+[2019-11-21 19:35:36,243 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:36,247 PID:23786 ACT logger.py act] User action: {'Restaurant-Inform': [['Area', 'east'], ['Food', 'italian']]}
+[2019-11-21 19:35:36,248 PID:23786 ACT logger.py act] Goal: {'restaurant': {'info': {'food': 'italian', 'area': 'east'}, 'reqt': {'phone': '?'}}}
+[2019-11-21 19:35:36,248 PID:23786 NL logger.py nl] User utterance: What restaurants are located in the east ? Hmm , I 'll try italian .
+[2019-11-21 19:35:36,248 PID:23786 ACT logger.py act] Inferred user action: What restaurants are located in the east ? Hmm , I 'll try italian .
+[2019-11-21 19:35:36,248 PID:23786 STATE logger.py state] Dialog state: What restaurants are located in the east ? Hmm , I 'll try italian .
+[2019-11-21 19:35:36,729 PID:23786 ACT logger.py act] System action: There are 1 to choose from. What is your price range?
+[2019-11-21 19:35:36,729 PID:23786 NL logger.py nl] System utterance: There are 1 to choose from. What is your price range?
+[2019-11-21 19:35:36,742 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', '1']], 'Restaurant-Request': [['Price', '?']]}
+[2019-11-21 19:35:36,742 PID:23786 NL logger.py nl] User utterance: It just needs to be don't care .
+[2019-11-21 19:35:36,742 PID:23786 ACT logger.py act] Inferred user action: It just needs to be don't care .
+[2019-11-21 19:35:36,742 PID:23786 STATE logger.py state] Dialog state: It just needs to be don't care .
+[2019-11-21 19:35:37,065 PID:23786 ACT logger.py act] System action: How about pizza hut fen ditton ?
+[2019-11-21 19:35:37,065 PID:23786 NL logger.py nl] System utterance: How about pizza hut fen ditton ?
+[2019-11-21 19:35:37,080 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Name', 'fen'], ['Name', 'pizza']], 'Restaurant-Recommend': [['Name', 'ditton'], ['Name', 'hut']]}
+[2019-11-21 19:35:37,080 PID:23786 NL logger.py nl] User utterance: That place sounds great . Can I get the phone number please ?
+[2019-11-21 19:35:37,080 PID:23786 ACT logger.py act] Inferred user action: That place sounds great . Can I get the phone number please ?
+[2019-11-21 19:35:37,080 PID:23786 STATE logger.py state] Dialog state: That place sounds great . Can I get the phone number please ?
+[2019-11-21 19:35:37,621 PID:23786 ACT logger.py act] System action: Their phone number is 01223323737 . Can I help you with anything else today?
+[2019-11-21 19:35:37,621 PID:23786 NL logger.py nl] System utterance: Their phone number is 01223323737 . Can I help you with anything else today?
+[2019-11-21 19:35:37,638 PID:23786 ACT logger.py act] Inferred system action: {'Restaurant-Inform': [['Phone', '01223323737']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:35:37,638 PID:23786 NL logger.py nl] User utterance: Thank you , goodbye.
+[2019-11-21 19:35:37,638 PID:23786 ACT logger.py act] Inferred user action: Thank you , goodbye.
+[2019-11-21 19:35:37,639 PID:23786 STATE logger.py state] Dialog state: Thank you , goodbye.
+[2019-11-21 19:35:37,639 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:37,643 PID:23786 ACT logger.py act] User action: {'Hotel-Inform': [['Stars', '3']]}
+[2019-11-21 19:35:37,643 PID:23786 ACT logger.py act] Goal: {'hotel': {'info': {'pricerange': 'cheap', 'area': 'south', 'stars': '4'}, 'reqt': {'postcode': '?'}, 'fail_info': {'pricerange': 'cheap', 'area': 'south', 'stars': '3'}}}
+[2019-11-21 19:35:37,644 PID:23786 NL logger.py nl] User utterance: I would like it to be a 3 star hotel .
+[2019-11-21 19:35:37,644 PID:23786 ACT logger.py act] Inferred user action: I would like it to be a 3 star hotel .
+[2019-11-21 19:35:37,644 PID:23786 STATE logger.py state] Dialog state: I would like it to be a 3 star hotel .
+[2019-11-21 19:35:38,287 PID:23786 ACT logger.py act] System action: There are several, is there a particular area you would like to stay in?
+[2019-11-21 19:35:38,287 PID:23786 NL logger.py nl] System utterance: There are several, is there a particular area you would like to stay in?
+[2019-11-21 19:35:38,303 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'several']], 'Hotel-Request': [['Area', '?']]}
+[2019-11-21 19:35:38,303 PID:23786 NL logger.py nl] User utterance: Would you be able to help me find a place to stay in the south side of town ?
+[2019-11-21 19:35:38,303 PID:23786 ACT logger.py act] Inferred user action: Would you be able to help me find a place to stay in the south side of town ?
+[2019-11-21 19:35:38,303 PID:23786 STATE logger.py state] Dialog state: Would you be able to help me find a place to stay in the south side of town ?
+[2019-11-21 19:35:39,113 PID:23786 ACT logger.py act] System action: There are two guesthouse and a guesthouse that fit your requirements. Do you have a price range?
+[2019-11-21 19:35:39,113 PID:23786 NL logger.py nl] System utterance: There are two guesthouse and a guesthouse that fit your requirements. Do you have a price range?
+[2019-11-21 19:35:39,134 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Choice', 'two'], ['Type', 'guesthouse'], ['Type', 'guesthouse']], 'Hotel-Request': [['Price', '?']]}
+[2019-11-21 19:35:39,134 PID:23786 NL logger.py nl] User utterance: I would like to keep it in the cheap range , please .
+[2019-11-21 19:35:39,135 PID:23786 ACT logger.py act] Inferred user action: I would like to keep it in the cheap range , please .
+[2019-11-21 19:35:39,135 PID:23786 STATE logger.py state] Dialog state: I would like to keep it in the cheap range , please .
+[2019-11-21 19:35:39,715 PID:23786 ACT logger.py act] System action: There are no hotels in the south that fit your requirements.
+[2019-11-21 19:35:39,715 PID:23786 NL logger.py nl] System utterance: There are no hotels in the south that fit your requirements.
+[2019-11-21 19:35:39,734 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-NoOffer': [['Type', 'hotels'], ['Area', 'south']]}
+[2019-11-21 19:35:39,734 PID:23786 NL logger.py nl] User utterance: It should have a 4 star rating .
+[2019-11-21 19:35:39,734 PID:23786 ACT logger.py act] Inferred user action: It should have a 4 star rating .
+[2019-11-21 19:35:39,734 PID:23786 STATE logger.py state] Dialog state: It should have a 4 star rating .
+[2019-11-21 19:35:40,395 PID:23786 ACT logger.py act] System action: I would recommend rosa's bed and breakfast . Would you like me to book a room for you?
+[2019-11-21 19:35:40,395 PID:23786 NL logger.py nl] System utterance: I would recommend rosa's bed and breakfast . Would you like me to book a room for you?
+[2019-11-21 19:35:40,415 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Recommend': [['Name', "rosa 's bed and breakfast"]], 'Booking-Inform': [['none', 'none']]}
+[2019-11-21 19:35:40,416 PID:23786 NL logger.py nl] User utterance: What is the postcode ?
+[2019-11-21 19:35:40,416 PID:23786 ACT logger.py act] Inferred user action: What is the postcode ?
+[2019-11-21 19:35:40,416 PID:23786 STATE logger.py state] Dialog state: What is the postcode ?
+[2019-11-21 19:35:41,195 PID:23786 ACT logger.py act] System action: The postcode is cb22ha . Can I help you with anything else?
+[2019-11-21 19:35:41,195 PID:23786 NL logger.py nl] System utterance: The postcode is cb22ha . Can I help you with anything else?
+[2019-11-21 19:35:41,211 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Post', 'cb22 ha']], 'general-reqmore': [['none', 'none']]}
+[2019-11-21 19:35:41,212 PID:23786 NL logger.py nl] User utterance: Thank you , goodbye.
+[2019-11-21 19:35:41,212 PID:23786 ACT logger.py act] Inferred user action: Thank you , goodbye.
+[2019-11-21 19:35:41,212 PID:23786 STATE logger.py state] Dialog state: Thank you , goodbye.
+[2019-11-21 19:35:41,212 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:41,216 PID:23786 ACT logger.py act] User action: {'Police-Request': [['Phone', '?'], ['Addr', '?']]}
+[2019-11-21 19:35:41,217 PID:23786 ACT logger.py act] Goal: {'police': {'info': {}, 'reqt': {'address': '?', 'phone': '?'}}}
+[2019-11-21 19:35:41,217 PID:23786 NL logger.py nl] User utterance: I only needed the phone number . Thank you !. Can you give me their address , please ?
+[2019-11-21 19:35:41,217 PID:23786 ACT logger.py act] Inferred user action: I only needed the phone number . Thank you !. Can you give me their address , please ?
+[2019-11-21 19:35:41,217 PID:23786 STATE logger.py state] Dialog state: I only needed the phone number . Thank you !. Can you give me their address , please ?
+[2019-11-21 19:35:41,754 PID:23786 ACT logger.py act] System action: a and b guest house is located at 124 tenison road . Their phone number is 01223315702
+[2019-11-21 19:35:41,754 PID:23786 NL logger.py nl] System utterance: a and b guest house is located at 124 tenison road . Their phone number is 01223315702
+[2019-11-21 19:35:41,771 PID:23786 ACT logger.py act] Inferred system action: {'Hotel-Inform': [['Addr', '124 tenison road'], ['Name', 'a and b guest house'], ['Phone', '01223315702']]}
+[2019-11-21 19:35:41,771 PID:23786 NL logger.py nl] User utterance: Could you tell me where to find the nearest police station and give the telephone number ? Great , could I also have their address .
+[2019-11-21 19:35:41,771 PID:23786 ACT logger.py act] Inferred user action: Could you tell me where to find the nearest police station and give the telephone number ? Great , could I also have their address .
+[2019-11-21 19:35:41,771 PID:23786 STATE logger.py state] Dialog state: Could you tell me where to find the nearest police station and give the telephone number ? Great , could I also have their address .
+[2019-11-21 19:35:41,977 PID:23786 ACT logger.py act] System action: The nearest police station is in Parkside, Cambridge .
+[2019-11-21 19:35:41,978 PID:23786 NL logger.py nl] System utterance: The nearest police station is in Parkside, Cambridge .
+[2019-11-21 19:35:41,998 PID:23786 ACT logger.py act] Inferred system action: {'Police-Inform': [['Addr', 'Parkside , Cambridge']]}
+[2019-11-21 19:35:41,998 PID:23786 NL logger.py nl] User utterance: Yes , I 'll also need their phone number .
+[2019-11-21 19:35:41,998 PID:23786 ACT logger.py act] Inferred user action: Yes , I 'll also need their phone number .
+[2019-11-21 19:35:41,999 PID:23786 STATE logger.py state] Dialog state: Yes , I 'll also need their phone number .
+[2019-11-21 19:35:42,178 PID:23786 ACT logger.py act] System action: Their phone number is 01223358966 .
+[2019-11-21 19:35:42,179 PID:23786 NL logger.py nl] System utterance: Their phone number is 01223358966 .
+[2019-11-21 19:35:42,194 PID:23786 ACT logger.py act] Inferred system action: {'Police-Inform': [['Phone', '01223358966']]}
+[2019-11-21 19:35:42,194 PID:23786 NL logger.py nl] User utterance: I am all set . Have a nice day . Bye .
+[2019-11-21 19:35:42,194 PID:23786 ACT logger.py act] Inferred user action: I am all set . Have a nice day . Bye .
+[2019-11-21 19:35:42,194 PID:23786 STATE logger.py state] Dialog state: I am all set . Have a nice day . Bye .
+[2019-11-21 19:35:42,195 PID:23786 NL logger.py nl] ---A dialog session is done---
+[2019-11-21 19:35:42,200 PID:23786 ACT logger.py act] User action: {'Attraction-Inform': [['Area', 'centre']]}
+[2019-11-21 19:35:42,200 PID:23786 ACT logger.py act] Goal: {'attraction': {'info': {'area': 'centre'}, 'reqt': {'postcode': '?'}}, 'restaurant': {'info': {'food': 'indian', 'pricerange': 'expensive', 'area': 'centre'}, 'reqt': {'address': '?'}}}
+[2019-11-21 19:35:42,200 PID:23786 NL logger.py nl] User utterance: Are there anything fun to do in city centre ?
+[2019-11-21 19:35:42,200 PID:23786 ACT logger.py act] Inferred user action: Are there anything fun to do in city centre ?
+[2019-11-21 19:35:42,200 PID:23786 STATE logger.py state] Dialog state: Are there anything fun to do in city centre ?
+[2019-11-21 19:35:42,774 PID:23786 ACT logger.py act] System action: There are 44 different attractions in the centre, is there a type of activity you would like to try?
+[2019-11-21 19:35:42,774 PID:23786 NL logger.py nl] System utterance: There are 44 different attractions in the centre, is there a type of activity you would like to try?
+[2019-11-21 19:35:42,791 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Inform': [['Choice', '44'], ['Area', 'centre']], 'Attraction-Request': [['Type', '?']]}
+[2019-11-21 19:35:42,791 PID:23786 NL logger.py nl] User utterance: I 'll need the postcode .
+[2019-11-21 19:35:42,791 PID:23786 ACT logger.py act] Inferred user action: I 'll need the postcode .
+[2019-11-21 19:35:42,791 PID:23786 STATE logger.py state] Dialog state: I 'll need the postcode .
+[2019-11-21 19:35:43,148 PID:23786 ACT logger.py act] System action: May I recommend adc theatre ? Their postcode is cb58as
+[2019-11-21 19:35:43,148 PID:23786 NL logger.py nl] System utterance: May I recommend adc theatre ? Their postcode is cb58as
+[2019-11-21 19:35:43,164 PID:23786 ACT logger.py act] Inferred system action: {'Attraction-Recommend': [['Name', 'adc theatre'], ['Post', 'cb58as']]}
+[2019-11-21 19:35:43,164 PID:23786 NL logger.py nl] User utterance: It just needs to be expensive . I would prefer indian food please . Is that located in the centre ?
+[2019-11-21 19:35:43,164 PID:23786 ACT logger.py act] Inferred user action: It just needs to be expensive . I would prefer indian food please . Is that located in the centre ?
+[2019-11-21 19:35:43,164 PID:23786 STATE logger.py state] Dialog state: It just needs to be expensive . I would prefer indian food please . Is that located in the centre ?
+[2019-11-21 19:35:43,752 PID:23786 INFO archival.py _cleanup_archive_dir] removing temporary unarchived model dir at /tmp/tmpbtv318zi
+[2019-11-21 19:35:43,753 PID:23786 INFO archival.py _cleanup_archive_dir] removing temporary unarchived model dir at /tmp/tmp7mcnbk8_

@@ -1,0 +1,2 @@
+[2019-12-07 02:23:26,444 PID:31730 INFO archival.py load_archive] loading archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd
+[2019-12-07 02:23:26,446 PID:31730 INFO archival.py load_archive] extracting archive file /home/donghoon/.convlab/cache/35863b26c71cbed669f08d3e50030aed24e84e833eb523378b67226d137bedd9.f494dce99f30d2e1786136f7a0a487e643ee8ac430423828d1c0013526d1d7bd to temp dir /tmp/tmpa52ytpmx

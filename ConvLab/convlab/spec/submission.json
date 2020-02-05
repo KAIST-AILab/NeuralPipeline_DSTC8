@@ -1,0 +1,301 @@
+{
+  "submission1": {
+    "agent": [{
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "model":"gpt2_v1",
+          "max_history": 15,
+          "no_sample": 0,
+          "top_p": 0.8,
+          "model_checkpoint": "models/v1"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }],
+    "env": [{
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }],
+    "body": {
+      "product": "outer",
+      "num": 1
+    },
+    "meta": {
+      "distributed": false,
+      "eval_frequency": 100,
+      "num_eval": 100,
+      "max_tick_unit": "total_t",
+      "max_trial": 1,
+      "max_session": 1,
+      "resources": {
+        "num_cpus": 1,
+        "num_gpus": 0
+      }
+    }
+  },
+  "submission2": {
+    "agent": [{
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "model": "gpt2_v1",
+          "max_history": 15,
+          "no_sample": 1,
+          "model_checkpoint": "models/v1"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }],
+    "env": [{
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }],
+    "body": {
+      "product": "outer",
+      "num": 1
+    },
+    "meta": {
+      "distributed": false,
+      "eval_frequency": 100,
+      "num_eval": 100,
+      "max_tick_unit": "total_t",
+      "max_trial": 1,
+      "max_session": 1,
+      "resources": {
+        "num_cpus": 1,
+        "num_gpus": 0
+      }
+    }
+  },
+  "submission3": {
+    "agent": [{
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "model":"gpt2_v1",
+          "max_history": 15,
+          "no_sample": 0,
+          "top_p": 0.7,
+          "model_checkpoint": "models/v1"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }],
+    "env": [{
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }],
+    "body": {
+      "product": "outer",
+      "num": 1
+    },
+    "meta": {
+      "distributed": false,
+      "eval_frequency": 100,
+      "num_eval": 100,
+      "max_tick_unit": "total_t",
+      "max_trial": 1,
+      "max_session": 1,
+      "resources": {
+        "num_cpus": 1,
+        "num_gpus": 0
+      }
+    }
+  },
+  "submission4": {
+    "agent": [{
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "max_history": 15,
+          "model": "gpt2_v4",
+          "no_sample": 1,
+	      "top_p": 0.8,
+          "model_checkpoint": "models/v4"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }],
+    "env": [{
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }],
+    "body": {
+      "product": "outer",
+      "num": 1
+    },
+    "meta": {
+      "distributed": false,
+      "eval_frequency": 100,
+      "num_eval": 500,
+      "max_tick_unit": "total_t",
+      "max_trial": 1,
+      "max_session": 1,
+      "resources": {
+        "num_cpus": 1,
+        "num_gpus": 0
+      }
+    }
+  },
+  "submission5": {
+    "agent": [{
+      "name": "DialogAgent",
+      "algorithm": {
+        "name": "ExternalPolicy",
+        "e2e": {
+          "name": "Transformer",
+          "max_history": 15,
+          "model": "gpt2_v4",
+          "no_sample": 0,
+	      "top_p": 0.8,
+          "model_checkpoint": "models/v4"
+        },
+        "action_pdtype": "Argmax",
+        "action_policy": "default"
+      },
+      "memory": {
+        "name": "Replay",
+        "max_size": 1
+      }
+    }],
+    "env": [{
+      "name": "multiwoz",
+      "user_policy": {
+        "name": "UserPolicyAgendaMultiWoz"
+      },
+      "sys_policy": {
+        "name": "RuleBasedMultiwozBot"
+      },
+      "nlu": {
+        "name": "MILU",
+        "model_file": "https://convlab.blob.core.windows.net/models/milu.tar.gz"
+      },
+      "nlg": {
+        "name": "MultiwozTemplateNLG",
+        "is_user": true
+      },
+      "evaluator": {
+        "name": "MultiWozEvaluator"
+      },
+      "max_t": 40,
+      "max_frame": 1000
+    }],
+    "body": {
+      "product": "outer",
+      "num": 1
+    },
+    "meta": {
+      "distributed": false,
+      "eval_frequency": 100,
+      "num_eval": 500,
+      "max_tick_unit": "total_t",
+      "max_trial": 1,
+      "max_session": 1,
+      "resources": {
+        "num_cpus": 1,
+        "num_gpus": 0
+      }
+    }
+  }
+}
