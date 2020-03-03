@@ -4,6 +4,9 @@ Our code is developed on the ConvLab github page (https://github.com/ConvLab/Con
 
 ## Environment setting
 
+conda version : 4.7.10
+python version : 3.6.5
+
 Before creating conda environment, please edit env.yml to fit on your conda root path.
 For example, \'/home/jglee/anaconda\'.
 
