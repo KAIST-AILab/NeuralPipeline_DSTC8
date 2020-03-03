@@ -25,9 +25,9 @@ python -m torch.distributed.launch --nproc_per_node=${#OfGPUs, e.g.2} convlab/mo
 
 `-m torch.distributed.launch --nproc_per_node=${#OfGPUs}` part is to use multi GPUs. 
 
-Please refer to hugging_faces' TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.) 
+Please refer to huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.) 
 
-save folder path: /runs/${DATES}_${hostname}
+save folder path: /runs/${DATES}_${HOSTNAME} e.g. Mar03_13-31-00_hostname
 
 
 ## How to test on ConvLab
@@ -40,9 +40,10 @@ The weight files we fine-tuned will be downloaded into /models folder when runni
 python run.py submission.json submission${SUBMISSION_NUMBER e.g.4} eval
 ```
 
-If you want to evaluate your own fine-tuned weights, please handle the "model_checkpoint" on the right submission name in 'convlab/spec/submission.json'.
+If you want to evaluate your own fine-tuned weights, please handle the "model_checkpoint" on the right submission name (e.g. submission4) in 'convlab/spec/submission.json'.
 
 ## Credit
-Our code is based on hugging_faces' TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.)
+
+Our code is based on huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.)
 
 
