@@ -99,7 +99,7 @@ MODEL_INPUTS = ["input_ids", "mc_token_ids", "lm_labels", "mc_labels", "token_ty
 PADDED_INPUTS = ["input_ids", "lm_labels", "token_type_ids"]
 
 logger = logging.getLogger(__file__)
-
+logger.setLevel(logging.INFO)
 
 def average_distributed_scalar(scalar, args):
     """ Average a scalar over the nodes if we are in distributed training. We use this for distributed evaluation. """
@@ -323,6 +323,7 @@ def train():
         return loss.item()
 
     trainer = Engine(update)
+    trainer._logger.setLevel(logging.INFO)
 
     # Evaluation function and evaluator (evaluator output is the input of the metrics)
 
@@ -338,6 +339,7 @@ def train():
             lm_labels_flat_shifted = lm_labels[..., 1:].contiguous().view(-1)
             return (lm_logits_flat_shifted, mc_logits), (lm_labels_flat_shifted, mc_labels)
     evaluator = Engine(inference)
+    evaluator._logger.setLevel(logging.INFO)
 
     # Attach evaluation to trainer: we evaluate when we start the training and at the end of each epoch
     trainer.add_event_handler(Events.EPOCH_COMPLETED, lambda _: evaluator.run(val_loader))
