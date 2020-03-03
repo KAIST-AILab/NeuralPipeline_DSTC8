@@ -24,7 +24,8 @@ python -m torch.distributed.launch --nproc_per_node=${#OfGPUs, e.g.2} convlab/mo
 ```
 
 `-m torch.distributed.launch --nproc_per_node=${#OfGPUs}` part is to use multi GPUs. 
-please refer to (https://github.com/huggingface/transfer-learning-conv-ai.) 
+
+Please refer to hugging_faces' TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.) 
 
 save folder path: /runs/${DATES}_${hostname}
 
@@ -33,7 +34,7 @@ save folder path: /runs/${DATES}_${hostname}
 
 In convlab/modules/e2e/multiwoz/Transformer/Transformer.py, the Transformer class manages our algorithm.
 
-We already provides the fine-tuned model to be downloaded into /models folder when running 
+The weight files we fine-tuned will be downloaded into /models folder when running 
 
 ```
 python run.py submission.json submission${SUBMISSION_NUMBER e.g.4} eval
@@ -42,6 +43,6 @@ python run.py submission.json submission${SUBMISSION_NUMBER e.g.4} eval
 If you want to evaluate your own fine-tuned weights, please handle the "model_checkpoint" on the right submission name in 'convlab/spec/submission.json'.
 
 ## Credit
-Our code is based on https://github.com/huggingface/transfer-learning-conv-ai.
+Our code is based on hugging_faces' TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.)
 
 
