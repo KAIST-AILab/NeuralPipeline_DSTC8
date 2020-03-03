@@ -18,14 +18,14 @@ conda activate neural\_pipeline
 ```
 cd ConvLab  # (Working directory is $ROOT/convlab. This is the criteria.)
 
-python -m torch.distributed.launch --nproc\_per\_node=${#OfGPUs} convlab/modules/e2e/multiwoz/Transformer/train.py --dataset\_path=data/multiwoz/ --dataset\_cache=./dataset\_cache --model\_checkpoint=gpt2 --model\_version=v4 --lm\_coef=2.0 --max\_history=20 --gradient\_accumulation\_steps=4
+python -m torch.distributed.launch --nproc_per_node=${#OfGPUs, e.g.2} convlab/modules/e2e/multiwoz/Transformer/train.py --dataset_path=data/multiwoz/ --dataset_cache=./dataset\_cache --model_checkpoint=gpt2 --model_version=v4 --lm_coef=2.0 --max_history=20 --gradient_accumulation_steps=4
 
 ```
 
-`-m torch.distributed.launch --nproc\_per\_node=${#OfGPUs}` part is to use multi GPUs. 
+`-m torch.distributed.launch --nproc_per_node=${#OfGPUs}` part is to use multi GPUs. 
 please refer to (https://github.com/huggingface/transfer-learning-conv-ai.) 
 
-save file path: /runs/${DATES}\_${hostname}
+save file path: /runs/${DATES}_${hostname}
 
 
 ## How to test on ConvLab
@@ -38,7 +38,7 @@ We already provides the fine-tuned model to be downloaded into /models folder wh
 python run.py submission.json submission${SUBMISSION_NUMBER e.g.4} eval
 ```
 
-If you want to evaluate your own fine-tuned weights, please handle the "model\_checkpoint" on the right submission name in 'convlab/spec/submission.json'.
+If you want to evaluate your own fine-tuned weights, please handle the "model_checkpoint" on the right submission name in 'convlab/spec/submission.json'.
 
 ## Credit
 Our code is developed based on https://github.com/huggingface/transfer-learning-conv-ai.
