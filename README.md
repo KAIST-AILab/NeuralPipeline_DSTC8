@@ -19,7 +19,10 @@ The description below follows the working directory.
 
 ```
 cd ConvLab # (working directory)
-python -m torch.distributed.launch --nproc_per_node=${#OfGPUs, e.g.2} convlab/modules/e2e/multiwoz/Transformer/train.py --dataset_path=data/multiwoz/ --dataset_cache=./dataset_cache --model_checkpoint=gpt2 --model_version=v4 --lm_coef=2.0 --max_history=20 --gradient_accumulation_steps=4
+cd data/multiwoz
+unzip total_v4.zip
+unzip val_v4.zip
+python -m torch.distributed.launch --nproc_per_node=${#OfGPUs, e.g.2} convlab/modules/e2e/multiwoz/Transformer/train.py --dataset_path=./data/multiwoz/ --dataset_cache=./dataset_cache --model_checkpoint=gpt2 --model_version=v4 --lm_coef=2.0 --max_history=20 --gradient_accumulation_steps=4
 ```
 
 `-m torch.distributed.launch --nproc_per_node=${#OfGPUs}` part is to use multi GPUs. 
