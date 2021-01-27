@@ -764,7 +764,7 @@ class SequenceSummary(nn.Module):
             output = hidden_states[:, 0]
         elif self.summary_type == 'mean':
             output = hidden_states.mean(dim=1)
-        elif self.summary_type == 'token_ids':
+        elif self.summary_type == 'cls_index':  #'token_ids':
             if token_ids is None:
                 token_ids = torch.full_like(hidden_states[..., :1, :], hidden_states.shape[-2]-1, dtype=torch.long)
             else:
