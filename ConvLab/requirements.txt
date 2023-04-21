@@ -117,7 +117,7 @@ snowballstemmer==1.2.1
 spacy==2.0.18
 Sphinx==1.8.5
 sphinxcontrib-websupport==1.1.0
-sqlparse==0.2.4
+sqlparse==0.4.4
 tensorboard==1.13.1
 tensorboardX==1.2
 tensorflow==1.13.1
